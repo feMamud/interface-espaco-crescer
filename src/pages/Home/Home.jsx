@@ -1,16 +1,18 @@
 import './Home.css';
-import NavBar from '../../components/NavBar/Navegacao';
+import Navegacao from '../../components/Navegacao/Navegacao';
 import Welcome from '../../components/Welcome/Welcome';
 import TextoHome from '../../components/Textos/TextoHome/TextoHome';
+import Rodape from '../../components/Rodape/Rodape';
 
 function Home() {
     return(
         <div className='mae-home'>
-            <NavBar />
+            <Navegacao />
             <div className='home-container'>
             <Welcome />
-            </div>{/**home-container */}
             <TextoHome />
+            <Rodape />
+            </div>{/**home-container */}
         </div>//mae-home
     )
 }

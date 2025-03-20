@@ -1,0 +1,203 @@
+/* Paleta de Cores */
+:root {
+  --marrom-claro: #c8a98a;
+  --branco-suave: #f4f4f4;
+  --verde-claro: #a8d5ba;
+  --azul-pastel: #a6c8e1;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+.mae-txt-home {
+  position: relative;
+  top: -16vh; /* Ajuste o valor conforme necessário */
+  z-index: 0; /* Garante que essa div fique abaixo de outros elementos */
+}
+
+.container-txt-home-1 {
+  width: 50vw;
+  margin-left: 5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: #e9d7c6;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(94, 94, 94, 0.2); /* 4px e 8px em rem */
+  z-index: 1;
+}
+
+.titulo-txt-home-1 {
+  color: black;
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+
+.texto1-txt-home-1 {
+  color: black;
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.texto2-txt-home-1 {
+  color: black;
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.mark-blue {
+  background-color: rgba(
+    80,
+    255,
+    255,
+    0.5
+  ); /* Usando o 'rgba' para definir a opacidade do fundo */
+  position: relative;
+  z-index: 1;
+}
+
+.foto-inicio-1 {
+  position: absolute;
+  top: -2rem;
+  margin-left: 62vw;
+  width: 25vw;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(94, 94, 94, 0.2); /* 4px e 8px em rem */
+  transition: transform 0.3s ease; /* Opcional para um efeito suave */
+}
+
+.foto-inicio-2 {
+  position: absolute;
+  margin-left: 10vw;
+  top: 20rem;
+  width: 25vw;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(94, 94, 94, 0.2); /* 4px e 8px em rem */
+  transition: transform 0.3s ease; /* Opcional para um efeito suave */
+  z-index: -1;
+}
+
+/* Segundo container */
+.container-txt-home-2 {
+  width: 50vw;
+  margin-left: 40vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: #e9d7c6;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(94, 94, 94, 0.2); /* 4px e 8px em rem */
+  margin-top: 3rem; /* Espaço entre o primeiro e o segundo container */
+  padding-bottom: 2rem;
+}
+
+.container-txt-home-2 {
+  position: relative;
+  top: -5.5rem; /* Ajuste conforme necessário */
+  overflow: hidden; /* Impede que ultrapasse o limite da div */
+  z-index: -1;
+}
+
+/* Texto do segundo container */
+.texto2-txt-home-1 {
+  color: black;
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .foto-inicio-1 {
+    width: 30vw;
+  }
+  .foto-inicio-2 {
+    width: 30vw;
+    margin-left: 8vw;
+    margin-top: 40vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1070px) {
+  .foto-inicio-2 {
+    width: 50vh;
+    margin-left: 8vw;
+    top: 20rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1005px) {
+  .foto-inicio-2 {
+    width: 50vh;
+    margin-left: 6vw;
+    top: 20rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 940px) {
+  .container-txt-home-2 {
+    width: 45vw;
+    margin-left: 45vw;
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 830px) {
+  .container-txt-home-2 {
+    width: 45vw;
+    margin-left: 47vw;
+    margin-top: 3rem;
+  }
+
+  .foto-inicio-2 {
+    width: 37vw;
+    margin-left: 8vw;
+    top: 20rem;
+  }
+}
+
+/* Para telas pequenas (smartphones em modo retrato) */
+@media (max-width: 480px) {
+  .foto-inicio-1 {
+    width: 80vw;
+    margin-left: 8vw;
+    top: 120vw;
+    z-index: -1;
+  }
+  .container-txt-home-1 {
+    width: 85vw;
+    margin-left: 5vw;
+    margin-top: 3vw;
+    z-index: 1;
+  }
+  .container-txt-home-2 {
+    width: 85vw;
+    margin-left: 5vw;
+    margin-top: 115vw;
+    z-index: 1;
+    margin-bottom: 60vw;
+  }
+  .foto-inicio-2 {
+    width: 80vw;
+    margin-left: 8vw;
+    margin-top: 140vh;
+    z-index: -1;
+  }
+
+  .titulo-txt-home-1 {
+    color: black;
+    font-size: 6vw;
+    padding-top: 10vw;
+  }
+  
+  .texto1-txt-home-1 {
+    color: black;
+    font-size: 4vw;
+    padding-bottom: 2rem;
+  }
+  
+  .texto2-txt-home-1 {
+    color: black;
+    font-size: 4vw;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+}

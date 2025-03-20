@@ -50,7 +50,7 @@
   
   .hamburger.open .bar {
     transform: rotate(45deg); /* Roda a primeira barra em 45 graus */
-    background-color: #fff; /* Altera a cor da barra */
+    background-color: #33ff00; /* Altera a cor da barra */
   }
   
   
@@ -65,7 +65,7 @@
   .bar {
     width: 25px; /* Define a largura das barras */
     height: 3px; /* Define a altura das barras */
-    background-color: #fff; /* Define a cor das barras */
+    background-color: #33ff00; /* Define a cor das barras */
     margin: 4px 0; /* Define a margem vertical entre as barras */
     transition: all 0.3s; /* Define transições suaves para todas as propriedades */
   }
@@ -98,22 +98,19 @@
     transform: scale(1.1);
   }
   
-  .nav-links li a:focus {
-    outline: 2px solid #6abcff;
-  }
   
   .nav-links.open {
     display: flex; /* Exibe os links em tela pequena */
     flex-direction: column; /* Alinha os itens verticalmente */
     position: absolute; /* Posiciona os links de forma absoluta */
-    top: 70px; /* Define a posição superior */
     left: 0; /* Alinha à esquerda */
     background-color: #2B2726; /* Define a cor de fundo */
     width: 100%; /* Define a largura para 100% */
     text-align: center; /* Centraliza o texto */
-    padding: 10px 0; /* Define o padding vertical */
+    padding: 0.8rem 0; /* Define o padding vertical */
+    margin-top: 2.8vw;
     z-index: 1000; /* Garante que os links fiquem acima do conteúdo */
-    gap: 20px; /* Define o espaço entre os itens */
+    gap: 2rem; /* Define o espaço entre os itens */
   }
   
   @media (max-width: 768px) {
@@ -135,3 +132,8 @@
     }
   }
   
+  @media (max-width: 480px) {
+    .bar{
+      margin-right: 10vw;
+    }
+  }

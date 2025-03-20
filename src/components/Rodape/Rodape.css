@@ -1,0 +1,137 @@
+/* Paleta de Cores */
+:root {
+  --marrom-claro: #c8a98a;
+  --branco-suave: #f4f4f4;
+  --verde-claro: #a8d5ba;
+  --azul-pastel: #a6c8e1;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #d4c4b4;
+  color: #000000;
+  padding: 2rem 0;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Container centralizador */
+.container-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw; /* Largura máxima de 90% da tela */
+  margin: 0 auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+/* Logo do Rodapé */
+.logo-rodape img {
+  width: 10rem; /* Largura responsiva em rem */
+  height: auto;
+}
+
+/* Texto do rodapé */
+.informacoes-rodape .texto-rodape {
+  font-size: 1.25rem; /* Usando rem para responsividade */
+  font-weight: 300;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Links do rodapé */
+.links-rodape ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem; /* Maior espaçamento entre os links */
+}
+
+.links-rodape a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem; /* Tamanho responsivo */
+  transition: color 0.3s ease, transform 0.3s ease; /* Animação suave de aumento */
+}
+
+.links-rodape a:hover {
+  color: #82fc4c;
+  transform: scale(1.1); /* Aumento suave ao passar o cursor */
+}
+
+/* Rodapé inferior (informações do desenvolvedor) */
+.desenvolvedor {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
+}
+
+.desenvolvedor a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.desenvolvedor a:hover {
+  color: #82fc4c;
+}
+
+.femamud {
+  position: relative;
+  top: 3.7vh;
+  margin-left: 0.5vw;
+  width: 10vh;
+  transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+.femamud:hover {
+  transform: scale(1.05); /* Aumenta 20% no hover */
+}
+
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .container-rodape {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem; /* Ajuste na lateral para telas pequenas */
+  }
+
+  .links-rodape ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo-rodape img {
+    margin-bottom: 1rem;
+    width: 8rem; /* Menor largura da logo em telas pequenas */
+  }
+
+  .informacoes-rodape .texto-rodape {
+    font-size: 1rem; /* Ajuste do tamanho da fonte em telas pequenas */
+  }
+}
+
+/* Responsividade para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+  .rodape {
+    padding: 1.5rem 0; /* Menos padding para telas pequenas */
+  }
+
+  .links-rodape ul {
+    gap: 0.8rem; /* Menor espaçamento entre os links */
+  }
+
+  .informacoes-rodape .texto-rodape {
+    font-size: 0.875rem; /* Fonte menor em telas muito pequenas */
+  }
+}

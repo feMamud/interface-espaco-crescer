@@ -1,0 +1,179 @@
+/* Paleta de Cores */
+:root {
+  --marrom-claro: #c8a98a;
+  --branco-suave: #f4f4f4;
+  --verde-claro: #a8d5ba;
+  --azul-pastel: #a6c8e1;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+.mae-txt-espaco {
+  position: relative;
+  top: -16vh; /* Ajuste o valor conforme necessário */
+  z-index: 0; /* Garante que essa div fique abaixo de outros elementos */
+}
+
+.container-txt-espaco-1 {
+  width: 89vw;
+  margin-top: 8vw;
+  margin-left: 3vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: #e9d7c6;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(94, 94, 94, 0.2); /* 4px e 8px em rem */
+  z-index: 2;
+}
+
+.container-txt-h1-1 {
+  padding-left: 4.3rem;
+  padding-top: 1.6rem;
+  padding-bottom: 0.5rem;
+  color: black;
+  font-size: 2.5rem;
+}
+
+.mark-green {
+  background-color: #00ff4080; /* Usando o 'rgba' para definir a opacidade do fundo */
+  position: relative;
+  z-index: 1;
+}
+
+.texto-txt-espaco-1 {
+  color: black;
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.img-txt-espaco-1 {
+  position: absolute;
+  top: 16vw;
+  width: 30vw;
+  padding-left: 50vw;
+}
+
+.paragrafo-img-txt-espaco-1 {
+  display: flex;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 4rem; /* Espaçamento entre as divs */
+  flex-wrap: wrap; /* Permite quebrar para outra linha em telas menores */
+  padding: 2rem; /* Espaçamento interno */
+}
+
+/* Container principal para alinhar as imagens lado a lado */
+.containers-imgs {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens na tela */
+  gap: 2vw; /* Espaçamento dinâmico entre as imagens */
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  padding: 5vh 2vw; /* Margem interna responsiva */
+}
+
+/* Estilização do contêiner de cada imagem */
+.containers-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(90vw, 350px); /* Largura máxima de 300px, mas ajustável em telas menores */
+  z-index: -1;
+}
+
+/* Estilização das imagens */
+.containers-imgs-imgs {
+  position: relative;
+  top: -40vh;
+  width: 100%; /* Mantém a imagem responsiva dentro do contêiner */
+  height: auto; /* Mantém a proporção original */
+  border-radius: 1rem; /* Borda levemente arredondada */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+.container1-txt-espaco-1 {
+  padding: 2rem;
+  border-radius: 1rem; /* Bordas arredondadas responsivas */
+  text-align: center;
+  width: min(90vw, 300px); /* Largura máxima de 300px, mas ajustável em telas menores */
+  background: linear-gradient(to bottom, rgba(233, 215, 198, 0) 0%, #e9d7c6 140%);
+}
+
+/* Garantir que as divs fiquem lado a lado e centralizadas */
+.paragrafo-img-txt-espaco-1 {
+  display: flex;
+  justify-content: center;
+  gap: 2vw; /* Espaço entre as divs */
+  flex-wrap: wrap; /* Permite quebrar para próxima linha em telas menores */
+  padding: 5vh 2vw; /* Margem interna responsiva */
+}
+
+.container-txt-h1-2 {
+  padding-top: 1.6rem;
+  padding-bottom: 0.5rem;
+  color: black;
+  font-size: 2.5rem;
+}
+
+.img-header{
+  margin-left: 25vw;
+  width: 50%;
+  border-radius: 1rem;
+}
+
+/* Container principal para alinhar as imagens lado a lado */
+.galeria-img {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens na tela */
+  gap: 2vw; /* Espaçamento dinâmico entre as imagens */
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  padding: 5vh 2vw; /* Margem interna responsiva */
+}
+
+/* Estilização do contêiner de cada imagem */
+.containers-img-div-esquerda,
+.containers-img-div-centro,
+.containers-img-div-direita {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(90vw, 350px); /* Largura máxima de 300px, mas ajustável em telas menores */
+  z-index: 1;
+}
+
+.containers-img-div-centro{
+  z-index: 1;
+}
+
+.containers-img-div-direita{
+  z-index: -1;
+}
+
+/* Estilização das imagens */
+.containers-imgs-esquerda,
+.containers-imgs-centro,
+.containers-imgs-direita
+{
+  position: relative;
+  width: 100%; /* Mantém a imagem responsiva dentro do contêiner */
+  height: auto; /* Mantém a proporção original */
+  border-radius: 1rem; /* Borda levemente arredondada */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  transition: transform 0.2s ease; /* Opcional para um efeito suave */
+}
+
+.containers-imgs-esquerda{
+  position: relative;
+  right: -28vw;
+}
+
+.containers-imgs-direita{
+  position: relative;
+  left: -28vw;
+}
+
+/* Para telas pequenas (smartphones em modo retrato) */
+@media (max-width: 480px) {
+  .container-txt-home-1{
+    margin-top: 30vw;
+  }
+}

@@ -1,5 +1,7 @@
 // Importa o componente Home que representa a página inicial da aplicação
-import Home from './pages/Home/Home';
+import Home from './pages/Home/Home.jsx';
+//
+import Espaco from './pages/Espaco/Espaco';
 // Importa os componentes necessários do react-router-dom para configurar o roteamento
 import { BrowserRouter as Roteador, Routes, Route } from 'react-router-dom';
 
@@ -13,6 +15,7 @@ function AppRoutes() {
                 <Routes>
                     {/* Define a rota para a página inicial */}
                     <Route exact path='/' Component={Home} />
+                    <Route path='/Espaco' Component={Espaco} />
                 </Routes>
             </Roteador>
         </>
