@@ -8,6 +8,8 @@
 
 /* Rodapé */
 .rodape {
+  position: relative;
+  bottom: 0;
   background-color: #d4c4b4;
   color: #000000;
   padding: 2rem 0;
