@@ -40,39 +40,8 @@ const useTextoHomeAnimations = () => {
       });
     });
 
-        // Definições das animações para mobile (telas menores que 768px)
-        mm.add('(max-width: 768px)', () => {
-          const animations = [
-            {
-              target: '.foto-inicio-1',
-              y: '20vh', // Move menos em telas menores
-              start: 'top center',
-              end: 'center top',
-            },
-            {
-              target: '.foto-inicio-2',
-              y: '162vh', // Move menos em telas menores
-              start: 'top bottom',
-              end: 'center top',
-            },
-          ];
-    
-          animations.forEach(({ target, y, start, end }) => {
-            gsap.to(target, {
-              y,
-              scrollTrigger: {
-                trigger: target,
-                start,
-                end,
-                scrub: 1,
-                markers: false, // Desative os marcadores para produção
-              },
-            });
-          });
-        });
-
-    // Definições das animações para mobile (telas menores que 768px)
-    mm.add('(max-width: 480px)', () => {
+    // Definições das animações para tablet (telas entre 481px e 768px)
+    mm.add('(min-width: 481px) and (max-width: 768px)', () => {
       const animations = [
         {
           target: '.foto-inicio-1',
@@ -82,8 +51,8 @@ const useTextoHomeAnimations = () => {
         },
         {
           target: '.foto-inicio-2',
-          y: '110vh', // Move menos em telas menores
-          start: 'center bottom',
+          y: '162vh', // Move mais em telas menores
+          start: 'top bottom',
           end: 'center top',
         },
       ];
@@ -100,6 +69,12 @@ const useTextoHomeAnimations = () => {
           },
         });
       });
+    });
+
+    // Definições para telas menores que 480px (desativa as animações)
+    mm.add('(max-width: 480px)', () => {
+      // Nenhuma animação é aplicada
+      console.log('Animações desativadas para telas menores que 480px');
     });
 
     // Limpeza quando o componente é desmontado

@@ -1,9 +1,0 @@
-version: "3"
-services:
-  web:
-    build: .
-    container_name: "web-treinototal-walle"
-    ports:
-      - "3407:80"
-    stdin_open: true
-    tty: true

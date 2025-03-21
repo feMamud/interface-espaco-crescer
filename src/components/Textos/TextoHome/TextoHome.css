@@ -158,27 +158,27 @@
 @media (max-width: 480px) {
   .foto-inicio-1 {
     width: 80vw;
-    margin-left: 8vw;
-    top: 120vw;
+    margin-left: 10vw;
+    top: 161vw;
     z-index: -1;
   }
   .container-txt-home-1 {
     width: 85vw;
     margin-left: 5vw;
-    margin-top: 3vw;
+    margin-top: 7vw;
     z-index: 1;
   }
   .container-txt-home-2 {
     width: 85vw;
     margin-left: 5vw;
-    margin-top: 115vw;
+    margin-top: 120vw;
     z-index: 1;
-    margin-bottom: 60vw;
+    margin-bottom: 35vw;
   }
   .foto-inicio-2 {
     width: 80vw;
-    margin-left: 8vw;
-    margin-top: 140vh;
+    margin-left: 10vw;
+    margin-top: 323vw;
     z-index: -1;
   }
 

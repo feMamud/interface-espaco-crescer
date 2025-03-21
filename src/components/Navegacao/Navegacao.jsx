@@ -49,11 +49,11 @@ function Navegacao() {
         <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
           {/* Links de navegação */}
           <li><a href="./">Início</a></li>
-          <li><a href="./Espaco">O Espaço</a></li>
-          <li><a href="./Psicopedagogia">Psicopedagogia</a></li>
-          <li><a href="./Psicanalise">  Psicanálise</a></li>
-          <li><a href="./Contatos">Contato</a></li>
-          <li><a href="./Eventos">Eventos</a></li>
+          <li><a href="./espaco">O Espaço</a></li>
+          <li><a href="./psicopedagogia">Psicopedagogia</a></li>
+          <li><a href="./psicanalise">  Psicanálise</a></li>
+          <li><a href="./contatos">Contato</a></li>
+          <li><a href="./eventos">Eventos</a></li>
         </ul>
       </div>
     </nav>
