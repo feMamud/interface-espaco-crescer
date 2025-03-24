@@ -6,7 +6,9 @@
     --verde-claro: #a8d5ba;
     --azul-pastel: #a6c8e1;
     --whatsapp: #25d366;
-    --instagram: #e1306c;
+    --instagram-start: #fccc63;
+    --instagram-middle: #bc1888;
+    --instagram-end: #e1306c;
     --facebook: #1877f2;
     --email: #ff9800;
     --telefone: #9c27b0;
@@ -14,7 +16,7 @@
 
 .mae-textocontato {
     margin-top: 3rem;
-    height: 60vw;
+    height: 75vw;
 }
 
 .painel-textocontato {
@@ -32,7 +34,7 @@
 /* Estilização padrão dos títulos */
 .h1-textocontato-1,
 .h1-textocontato-2 {
-    transition: transform 0.3s ease, color 0.3s ease; /* Efeito suave */
+    transition: transform 0.3s ease, color 0.3s ease;
     color: #19ff75;
 }
 
@@ -69,6 +71,10 @@
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* Caixa das redes sociais */
@@ -83,9 +89,8 @@
     gap: 1rem;
 }
 
-
 /* Estilização dos links */
-.redes-sociais a,
+.contato-textocontato a,
 .telefone {
     display: flex;
     align-items: center;
@@ -107,20 +112,25 @@
 /* Cores individuais para cada rede social */
 .whatsapp {
     background-color: var(--whatsapp);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .whatsapp:hover {
-    background-color: #1eb056;
+    background-color: #e9d7c6;
+    color: #00da57;
+    color: var(--whatsapp);
 }
 
+/* Degradê no texto ao passar o mouse */
 .instagram {
-    background-color: var(--instagram);
+    background-color: var(--instagram-end);
     color: white;
 }
 
 .instagram:hover {
-    background-color: #c1245c;
+    background: linear-gradient(45deg, var(--instagram-start), var(--instagram-middle), var(--instagram-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .facebook {
@@ -129,7 +139,9 @@
 }
 
 .facebook:hover {
-    background-color: #145db2;
+    background: linear-gradient(45deg, #3b5998, #1877f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .email {
@@ -138,7 +150,9 @@
 }
 
 .email:hover {
-    background-color: #e68900;
+    background: linear-gradient(45deg, #ff9800, #e67e22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .telefone {
@@ -148,9 +162,11 @@
 }
 
 .telefone:hover {
-    background-color: #7b1fa2;
+    background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.h1-contatotexto-3{
+.h1-contatotexto-3 {
     color: black;
 }

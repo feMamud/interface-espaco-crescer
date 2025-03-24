@@ -18,24 +18,28 @@ function TextoContato() {
             <h1 className="h1-contatotexto-3">
               Você pode entrar em contato conosco por:
             </h1>
-          </div>
-
-          <div className="redes-sociais">
-            <a href="https://wa.me/SEU_NUMERO" target="_blank" className="whatsapp">
-              <i className="bi bi-whatsapp"></i> WhatsApp
+            <a href="https://wa.me/+5516991564372" target="_blank" className="whatsapp">
+              <i className="bi bi-whatsapp"></i> WhatsApp - Maria Mamud
             </a>
-            <a href="https://www.instagram.com/SEU_PERFIL" target="_blank" className="instagram">
+            <a href="https://wa.me/+5516991852605" target="_blank" className="whatsapp">
+              <i className="bi bi-whatsapp"></i> WhatsApp - Mateus Gama Rodrigues
+            </a>
+            <a href="https://www.instagram.com/espacocrescerstz" target="_blank" className="instagram">
               <i className="bi bi-instagram"></i> Instagram
             </a>
-            <a href="https://www.facebook.com/SEU_PERFIL" target="_blank" className="facebook">
+            <a href="https://www.facebook.com/Crescerstz" target="_blank" className="facebook">
               <i className="bi bi-facebook"></i> Facebook
             </a>
-            <a href="mailto:SEU_EMAIL" className="email">
+            <a href="mailto:atendimento@spacocrescer.com.br" className="email">
               <i className="bi bi-envelope"></i> E-mail
             </a>
             <span className="telefone">
               <i className="bi bi-telephone"></i> (XX) XXXX-XXXX
             </span>
+          </div>
+
+          <div className="redes-sociais">
+            
           </div>
         </div>
       </div>
