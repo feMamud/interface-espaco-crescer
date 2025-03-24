@@ -52,7 +52,7 @@ function Navegacao() {
           <li><a href="./espaco">O Espaço</a></li>
           <li><a href="./psicopedagogia">Psicopedagogia</a></li>
           <li><a href="./psicanalise">  Psicanálise</a></li>
-          <li><a href="./contatos">Contato</a></li>
+          <li><a href="./contato">Contato</a></li>
           <li><a href="./eventos">Eventos</a></li>
         </ul>
       </div>

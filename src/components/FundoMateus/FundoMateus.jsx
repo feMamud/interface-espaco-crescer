@@ -15,19 +15,22 @@ function FundoMateus() {
             alt="Mateus">
           </img>
           <h1 className="h1-fundoMateus-1">
-            Psicopedagogia
+            Psicanálise
           </h1>
-          <h1 className="h1-fundoMateus-2">
-            Psicopedagoga
+          {/*<h1 className="h1-fundoMateus-2">
+            Psicanalista
           </h1>
           <h1 className="h1-fundoMateus-3">
             :
-          </h1>
+          </h1>*/}
           <h1 className="h1-fundoMateus-4">
             Mateus
           </h1>
           <h1 className="h1-fundoMateus-5">
-            Mamud
+            Gama
+          </h1>
+          <h1 className="h1-fundoMateus-6">
+            Rodrigues
           </h1>
         </div>
         <div className="fundo-fundoMateus-2">

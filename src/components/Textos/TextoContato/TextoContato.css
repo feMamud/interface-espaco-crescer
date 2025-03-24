@@ -1,0 +1,156 @@
+/* Paleta de Cores */
+:root {
+    --marrom-claro: #c8a98a;
+    --bege-claro: #e9d7c6;
+    --branco-suave: #f4f4f4;
+    --verde-claro: #a8d5ba;
+    --azul-pastel: #a6c8e1;
+    --whatsapp: #25d366;
+    --instagram: #e1306c;
+    --facebook: #1877f2;
+    --email: #ff9800;
+    --telefone: #9c27b0;
+}
+
+.mae-textocontato {
+    margin-top: 3rem;
+    height: 60vw;
+}
+
+.painel-textocontato {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 22vw;
+    background-color: #685b4d;
+    border-radius: 1rem;
+    gap: 1rem;
+    box-shadow: 0 0.25rem 5rem rgba(94, 94, 94, 0.2);
+    z-index: 1;
+}
+
+/* Estilização padrão dos títulos */
+.h1-textocontato-1,
+.h1-textocontato-2 {
+    transition: transform 0.3s ease, color 0.3s ease; /* Efeito suave */
+    color: #19ff75;
+}
+
+/* Posição dos títulos */
+.h1-textocontato-1 {
+    margin-top: 12vw;
+}
+
+.h1-textocontato-2 {
+    position: absolute;
+    margin-top: 12vw;
+    margin-left: 48vw;
+}
+
+/* Hover: Aumenta o tamanho e muda a cor para azul */
+.h1-textocontato-1:hover,
+.h1-textocontato-2:hover {
+    transform: scale(1.1);
+    color: var(--azul-pastel);
+}
+
+/* Container das informações lado a lado */
+.informacoes-textocontato {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/* Caixa de contato */
+.contato-textocontato {
+    width: 45%;
+    background-color: var(--bege-claro);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+/* Caixa das redes sociais */
+.redes-sociais {
+    width: 45%;
+    background-color: var(--marrom-claro);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* Estilização dos links */
+.redes-sociais a,
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.redes-sociais i {
+    font-size: 1.5rem;
+}
+
+/* Cores individuais para cada rede social */
+.whatsapp {
+    background-color: var(--whatsapp);
+    color: white;
+}
+
+.whatsapp:hover {
+    background-color: #1eb056;
+}
+
+.instagram {
+    background-color: var(--instagram);
+    color: white;
+}
+
+.instagram:hover {
+    background-color: #c1245c;
+}
+
+.facebook {
+    background-color: var(--facebook);
+    color: white;
+}
+
+.facebook:hover {
+    background-color: #145db2;
+}
+
+.email {
+    background-color: var(--email);
+    color: white;
+}
+
+.email:hover {
+    background-color: #e68900;
+}
+
+.telefone {
+    background-color: var(--telefone);
+    color: white;
+    cursor: default;
+}
+
+.telefone:hover {
+    background-color: #7b1fa2;
+}
+
+.h1-contatotexto-3{
+    color: black;
+}

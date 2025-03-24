@@ -8,6 +8,8 @@ import Espaco from './pages/Espaco/Espaco';
 import Psicopedagogia from './pages/Psicopedagogia/Psicopedagogia';
 //
 import Psicanalise from './pages/Psicanalise/Psicanalise';
+//
+import Contato from './pages/Contato/Contato';
 
 // Função que configura as rotas da aplicação
 function AppRoutes() {
@@ -21,7 +23,8 @@ function AppRoutes() {
                     <Route exact path='/' Component={Home} />
                     <Route path='/espaco' Component={Espaco} />
                     <Route path='/psicopedagogia' Component={Psicopedagogia} />
-                    <Route path='psicanalise' Component={Psicanalise} />
+                    <Route path='/psicanalise' Component={Psicanalise} />
+                    <Route path='/contato' Component={Contato} />
                 </Routes>
             </Roteador>
         </>

@@ -1,138 +1,160 @@
 /* Paleta de Cores */
 :root {
-    --marrom-claro: #c8a98a;
-    --branco-suave: #f4f4f4;
-    --verde-claro: #a8d5ba;
-    --azul-pastel: #a6c8e1;
+  --marrom-claro: #c8a98a;
+  --branco-suave: #f4f4f4;
+  --verde-claro: #a8d5ba;
+  --azul-pastel: #a6c8e1;
 }
 
 /* Container principal */
 .mae-fundoMateus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5.6rem;
-    width: 100%;
-    height: 80vh;
-  }
-  
-  /* Container da imagem e do título */
-  .container-fundoMateus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-  }
-  
-  /* Fundo com degradê do branco ao rosa */
-  .fundo-fundoMateus {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to bottom , #ffffff, #a6c8e1, #a6c8e1); /* Branco para rosa */
-    padding-top: 3rem;
-    border-radius: 1rem;
-    height: 31.5vw;
-    width: 100vw;
-    max-width: 90vw;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: -1;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.6rem;
+  width: 100%;
+  height: 80vh;
+}
 
-    /* Fundo com degradê do branco ao rosa */
-    .fundo-fundoMateus-2 {
-      position: absolute;
-      margin-right: 73vw;
-      background: linear-gradient(to bottom , #ffffff, #a6c8e1, #a6c8e1); /* Branco para rosa */
-      padding-top: 3rem;
-      border-radius: 1rem;
-      width: 16vw;
-      height: 31.5vw;
-      max-width: 90vw;
-      z-index: 0;
-    }
-  
-  /* Imagem */
-  .img-fundoMateus {
-    position: relative;
-    right: 18vw;
-    width: 28vw;
-    z-index: 2;
-    margin-left: 50vw;
-  }
+/* Container da imagem e do título */
+.container-fundoMateus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
 
-    /* Imagem */
-    .img-fundoMateus-2 {
-      position: absolute;
-      margin-top: 1vw;
-      right: -9.8vw;
-      width: 28vw;
-      z-index: 2;
-      margin-left: 50vw;
-    }
-  
-  /* Título */
-  .h1-fundoMateus-1 {
-    position: relative;
-    right: 18vw;
-    top: -6vw;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #0084ff; /* Rosa escuro */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 0;
-  }
-  
-    /* Título */
-    .h1-fundoMateus-2 {
-        position: relative;
-        right: 43vw;
-        top: -0.5vw;
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #0084ff; /* Rosa escuro */
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        z-index: 0;
-      }
+/* Fundo com degradê do branco ao rosa */
+.fundo-fundoMateus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #a6c8e1,
+    #a6c8e1
+  ); /* Branco para rosa */
+  padding-top: 3rem;
+  border-radius: 1rem;
+  height: 31.5vw;
+  width: 100vw;
+  max-width: 90vw;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
 
-        /* Título */
-  .h1-fundoMateus-3 {
-    position: relative;
-    right: 42.5vw;
-    top: -0.7vw;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #0084ff; /* Rosa escuro */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 0;
-  }
+/* Fundo com degradê do branco ao rosa */
+.fundo-fundoMateus-2 {
+  position: absolute;
+  margin-right: 76vw;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #a6c8e1,
+    #a6c8e1
+  ); /* Branco para rosa */
+  padding-top: 3rem;
+  border-radius: 1rem;
+  width: 14vw;
+  height: 31.5vw;
+  max-width: 90vw;
+  z-index: 0;
+}
 
-    /* Título */
-    .h1-fundoMateus-4 {
-        position: relative;
-        right: 42vw;
-        top: -0.5vw;
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #0084ff; /* Rosa escuro */
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        z-index: 0;
-      }
+/* Imagem */
+.img-fundoMateus {
+  position: relative;
+  right: 119.3vw;
+  width: 26vw;
+  z-index: 2;
+  margin-left: 38.5vw;
+}
 
-        /* Título */
-  .h1-fundoMateus-5 {
-    position: relative;
-    right: 41vw;
-    top: -0.5vw;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #0084ff; /* Rosa escuro */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 0;
-  }
-  
+/* Imagem */
+.img-fundoMateus-2 {
+  position: absolute;
+  margin-top: 2.3vw;
+  right: -14vw;
+  width: 26vw;
+  z-index: 2;
+  margin-left: 50vw;
+}
+
+/* Título */
+.h1-fundoMateus-1 {
+  position: relative;
+  right: 16vw;
+  top: -6vw;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0084ff; /* Rosa escuro */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 0;
+}
+
+/* Título */
+.h1-fundoMateus-2 {
+  position: relative;
+  right: 32vw;
+  top: -0.5vw;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0084ff; /* Rosa escuro */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 0;
+}
+
+/* Título */
+.h1-fundoMateus-3 {
+  position: relative;
+  right: 31.5vw;
+  top: -0.7vw;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0084ff; /* Rosa escuro */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 0;
+}
+
+/* Título */
+.h1-fundoMateus-4 {
+  position: relative;
+  right: 42vw;
+  top: -0.5vw;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0084ff; /* Rosa escuro */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 0;
+}
+
+/* Título */
+.h1-fundoMateus-5 {
+  position: relative;
+  right: 41.5vw;
+  top: -0.5vw;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0084ff; /* Rosa escuro */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 0;
+}
+
+/* Título */
+.h1-fundoMateus-6 {
+  position: relative;
+  right: 40.8vw;
+  top: -0.5vw;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0084ff; /* Rosa escuro */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 0;
+}

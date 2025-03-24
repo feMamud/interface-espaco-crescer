@@ -1,0 +1,46 @@
+import "./TextoContato.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+function TextoContato() {
+  return (
+    <div className="mae-textocontato">
+      <div className="container-textocontato">
+        <div className="painel-textocontato">
+          <h1 className="h1-textocontato-1">Entre</h1>
+          <h1 className="h1-textocontato-1">em</h1>
+          <h1 className="h1-textocontato-1">contato</h1>
+          <h1 className="h1-textocontato-1">conosco</h1>
+          <h1 className="h1-textocontato-2">!</h1>
+        </div>
+
+        <div className="informacoes-textocontato">
+          <div className="contato-textocontato">
+            <h1 className="h1-contatotexto-3">
+              Você pode entrar em contato conosco por:
+            </h1>
+          </div>
+
+          <div className="redes-sociais">
+            <a href="https://wa.me/SEU_NUMERO" target="_blank" className="whatsapp">
+              <i className="bi bi-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/SEU_PERFIL" target="_blank" className="instagram">
+              <i className="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/SEU_PERFIL" target="_blank" className="facebook">
+              <i className="bi bi-facebook"></i> Facebook
+            </a>
+            <a href="mailto:SEU_EMAIL" className="email">
+              <i className="bi bi-envelope"></i> E-mail
+            </a>
+            <span className="telefone">
+              <i className="bi bi-telephone"></i> (XX) XXXX-XXXX
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default TextoContato;

@@ -17,6 +17,7 @@ const useFundoMateusAnimations = () => {
         ".h1-fundoMateus-3",
         ".h1-fundoMateus-4",
         ".h1-fundoMateus-5",
+        ".h1-fundoMateus-6",
       ];
 
       h1Elements.forEach((target) => {
@@ -53,6 +54,7 @@ const useFundoMateusAnimations = () => {
         ".h1-fundoMateus-3",
         ".h1-fundoMateus-4",
         ".h1-fundoMateus-5",
+        ".h1-fundoMateus-6",
       ];
 
       h1Elements.forEach((target) => {
