@@ -1,6 +1,8 @@
 import Mateus from "../../assets/mateus.png";
 import useFundoMateusAnimations from "./FundoMateusAnimations";
 import "./FundoMateus.css";
+import './FundoMateusTablet.css';
+import './FundoMateusCelular.css';
 
 function FundoMateus() {
   // Chame o hook dentro do componente

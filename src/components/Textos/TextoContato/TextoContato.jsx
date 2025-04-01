@@ -5,6 +5,8 @@ import zapmateus from "../../../assets/zapmateus.png";
 import insta from "../../../assets/insta.png";
 import face from "../../../assets/face.png";
 import mail from "../../../assets/mail.png";
+import './TextoContatoTablet.css';
+import './TextoContatoCelular.css';
 
 function TextoContato() {
   return (

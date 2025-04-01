@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7vw;
+  margin-top: 16.5vw;
   width: 100%;
   height: 80vh;
 }
@@ -162,5 +162,9 @@
 @media (min-width: 1400px) and (max-width: 2560px) {
   .mae-fundoMateus{
     margin-top: 2.5vw;
+  }
+
+  .h1-fundoMateus-1{
+    right: 18vw;
   }
 }

@@ -10,6 +10,8 @@
     width: 89vw;
     margin-left: 3vw;
     margin-bottom: 1vw;
+    margin-top: 12vw;
+
     padding: 2rem; /* Espaçamento uniforme */
     background: linear-gradient(to bottom, #ffbfd1, #e9d7c6); /* Branco para rosa */
     border-radius: 1rem;
@@ -126,6 +128,6 @@
 @media (min-width: 1400px) and (max-width: 2560px) {
     .mae-textopsico{
         position: relative;
-        top: -4vw;
+        top: -16vw;
     }
 }

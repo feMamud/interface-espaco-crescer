@@ -4,6 +4,8 @@ import conhecimento from "../../../assets/conhecimento.png";
 import experiencia from "../../../assets/experiencia.jpg";
 import useTextoPsicaAnimations from "./TextoPsicaAnimations"; // Importe o hook
 import "./TextoPsica.css";
+import './TextoPsicaTablet.css';
+import './TextoPsicaCelular.css';
 
 function TextoPsica() {
   // Chame o hook dentro do componente

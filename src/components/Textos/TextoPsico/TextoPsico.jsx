@@ -5,6 +5,7 @@ import desenvolvimento from "../../../assets/desenvolvimento.jpeg";
 import useTextoPsicoAnimations from "./TextoPsicoAnimations"; // Importe o hook
 import "./TextoPsico.css";
 import './TextoPsicoTablet.css';
+import './TextoPsicoCelular.css';
 
 function TextoPsico() {
   // Chame o hook dentro do componente
