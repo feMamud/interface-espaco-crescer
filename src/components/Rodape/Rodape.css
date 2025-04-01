@@ -1,21 +1,14 @@
-/* Paleta de Cores */
-:root {
-  --marrom-claro: #c8a98a;
-  --branco-suave: #f4f4f4;
-  --verde-claro: #a8d5ba;
-  --azul-pastel: #a6c8e1;
-}
-
-/* Rodapé */
+/* Rodapé Profissional */
 .rodape {
   position: relative;
   bottom: 0;
   background-color: #d4c4b4;
   color: #000000;
-  padding: 2rem 0;
-  font-family: 'Arial', sans-serif;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Sombra suave */
-  transition: box-shadow 0.3s ease-in-out;
+  padding: 3vw 0;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-top: 0.3vw solid var(--marrom-claro);
 }
 
 /* Container centralizador */
@@ -23,24 +16,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 90vw; /* Largura máxima de 90% da tela */
+  max-width: 85vw;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2vw;
   flex-wrap: wrap;
 }
 
 /* Logo do Rodapé */
 .logo-rodape img {
-  width: 10rem; /* Largura responsiva em rem */
+  width: 10vw;
   height: auto;
+  filter: drop-shadow(0 0.2vw 0.5vw rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-rodape img:hover {
+  transform: scale(1.1);
 }
 
 /* Texto do rodapé */
 .informacoes-rodape .texto-rodape {
-  font-size: 1.25rem; /* Usando rem para responsividade */
-  font-weight: 300;
+  font-size: 1.3vw;
   text-align: center;
-  margin: 1rem 0;
+  margin: 1vw 0;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 /* Links do rodapé */
@@ -49,36 +49,42 @@
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 2rem; /* Maior espaçamento entre os links */
+  gap: 2vw;
 }
 
 .links-rodape a {
   color: #000000;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem; /* Tamanho responsivo */
-  transition: color 0.3s ease, transform 0.3s ease; /* Animação suave de aumento */
+  font-size: 1.3vw;
+  font-weight: 600;
+  letter-spacing: 0.05vw;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .links-rodape a:hover {
   color: #82fc4c;
-  transform: scale(1.1); /* Aumento suave ao passar o cursor */
+  transform: scale(1.1);
+  text-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.15);
 }
 
 /* Rodapé inferior (informações do desenvolvedor) */
 .desenvolvedor {
   text-align: center;
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  font-weight: 300;
+  margin-top: 1.5vw;
+  font-size: 1.2vw;
   color: #000000;
+  border-top: 0.2vw solid rgba(0, 0, 0, 0.1);
+  padding-top: 1.5vw;
+}
+
+.desenvolvedor p {
+  font-size: 1.2vw;
 }
 
 .desenvolvedor a {
   color: #00ccff;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
@@ -88,52 +94,81 @@
 
 .femamud {
   position: relative;
-  top: 3.7vh;
+  top: 1.4vw;
   margin-left: 0.5vw;
-  width: 10vh;
-  transition: transform 0.3s ease-in-out; /* Animação suave */
+  width: 9vh;
+  transition: transform 0.3s ease-in-out;
 }
 
 .femamud:hover {
-  transform: scale(1.05); /* Aumenta 20% no hover */
+  transform: scale(1.1);
 }
 
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-  .container-rodape {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 1rem; /* Ajuste na lateral para telas pequenas */
-  }
-
-  .links-rodape ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .logo-rodape img {
-    margin-bottom: 1rem;
-    width: 8rem; /* Menor largura da logo em telas pequenas */
-  }
-
-  .informacoes-rodape .texto-rodape {
-    font-size: 1rem; /* Ajuste do tamanho da fonte em telas pequenas */
-  }
+/* Menu Serviços */
+.menu-servicos {
+  position: relative;
+  display: inline-block;
 }
 
-/* Responsividade para telas muito pequenas (como celulares) */
-@media (max-width: 480px) {
-  .rodape {
-    padding: 1.5rem 0; /* Menos padding para telas pequenas */
-  }
+.btn-servicos {
+  background: none;
+  border: none;
+  font-size: 1.3vw;
+  font-weight: 600;
+  letter-spacing: 0.05vw;
+  cursor: pointer;
+  color: #000000;
+  border-top: 0.2vw solid rgba(0, 0, 0, 0);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
 
-  .links-rodape ul {
-    gap: 0.8rem; /* Menor espaçamento entre os links */
-  }
+.btn-servicos:hover {
+  color: #82fc4c;
+  transform: scale(1.1);
+}
 
-  .informacoes-rodape .texto-rodape {
-    font-size: 0.875rem; /* Fonte menor em telas muito pequenas */
+/* Submenu de Serviços */
+/* Ajuste no container do menu */
+.menu-servicos {
+  position: relative; /* Garante que o submenu fique posicionado em relação a este elemento */
+}
+
+/* Submenu de Serviços */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0; /* Ponto de partida na esquerda do botão */
+  transform: translateX(-20%); /* Move 20% para a esquerda */
+  background-color: #d4c4b4;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
+  border-radius: 0.5vw;
+  width: max-content;
+  min-width: 12vw;
+  z-index: 10;
+  padding: 0;
+  list-style: none;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.8vw 1.5vw;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2vw;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.submenu a:hover {
+  background-color: #a8d5ba;
+  color: #fff;
+}
+
+@media (min-width: 2048px) and (max-width: 3840px) {
+  .femamud {
+    top: 1.8vw;
   }
 }

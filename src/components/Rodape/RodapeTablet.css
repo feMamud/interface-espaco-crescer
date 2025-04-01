@@ -1,0 +1,53 @@
+@media (min-height: 1085px) and (max-height: 1400px) {
+  .informacoes-rodape .texto-rodape {
+    margin-top: 1vh;
+    padding-left: 6vh;
+    font-size: 2vh;
+  }
+
+  .links-rodape ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2vw;
+  }
+
+  .links-rodape {
+    position: absolute;
+    padding-left: 16vh;
+    padding-bottom: 9vh;
+  }
+
+  .links-rodape a {
+    font-size: 2.4vh;
+  }
+
+  .btn-servicos {
+    font-size: 2.4vh;
+    padding-top: 0.4vw;
+  }
+
+  .submenu a {
+    display: block;
+    padding: 0.8vw 1.5vw;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6vh;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .femamud {
+    top: 3vh;
+  }
+
+  /* Rodapé inferior (informações do desenvolvedor) */
+.desenvolvedor {
+    text-align: center;
+    margin-top: 1vw;
+  }
+
+  .desenvolvedor p{
+    font-size: 2vh;
+}
+}

@@ -42,6 +42,17 @@ h1 {
   line-height: 1.1;
 }
 
+:root {
+  font-size: 16px; /* Base para rem */
+}
+
+/* Mobile-first approach */
+body {
+  font-size: 1rem;
+  min-width: 320px; /* Evita scroll horizontal */
+  overflow-x: hidden;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -1,0 +1,60 @@
+@media (min-height: 1085px) and (max-height: 1400px) {
+  .navbar {
+    width: 100%; /* Define a largura da navbar para 100% */
+    position: fixed; /* Fixa a navbar no topo da página */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda */
+    height: 10vh; /* Define a altura da navbar */
+    background-color: #fcfcfc; /* Define a cor de fundo */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    padding: 0 1.4vw; /* Define o padding horizontal */
+    transition: height 0.3s, background 0.3s; /* Define transições suaves para altura e fundo */
+  }
+
+  .navbar.scrolled {
+    height: 5vh; /* Diminui a altura da navbar quando rolado */
+    background: #e9e9e9; /* Altera a cor de fundo quando rolado */
+  }
+
+  .logo img {
+    position: relative;
+    top: -1vh;
+    width: 17vh; /* Define a largura da imagem do logotipo */
+    height: 7.7vh; /* Define a altura da imagem do logotipo */
+    transition: width 0.3s, height 0.3s; /* Define transições suaves para largura e altura */
+  }
+
+  .navbar.scrolled .logo img {
+    padding-top: 2.3vh;
+    width: 8vh; /* Diminui a largura do logotipo quando rolado */
+    height: 4vh; /* Diminui a altura do logotipo quando rolado */
+  }
+
+  .nav-links {
+    font-size: 1.5vh;
+    gap: 1.5vh; /* Define o espaço entre os itens */
+  }
+
+  .nav-links.open {
+    display: flex; /* Exibe os links em tela pequena */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    position: absolute; /* Posiciona os links de forma absoluta */
+    top: 10vh !important;
+    left: 0; /* Alinha à esquerda */
+    background-color: #2b2726; /* Define a cor de fundo */
+    width: 100%; /* Define a largura para 100% */
+    text-align: center; /* Centraliza o texto */
+    padding: 0.8rem 0; /* Define o padding vertical */
+    z-index: 1000; /* Garante que os links fiquem acima do conteúdo */
+    gap: 2rem; /* Define o espaço entre os itens */
+  }
+
+  /* Ajusta a posição quando o menu está aberto e a navbar está rolada */
+  .nav-links.open.scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+    transition: all 0.3s;
+    top: 5vh !important; /* Ajuste de acordo com a altura da navbar scrolled */
+  }
+}

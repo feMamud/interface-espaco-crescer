@@ -4,6 +4,8 @@ import TextoHomeAnimations from "./TextoHomeAnimation"; // Importando a anima√ß√
 import FotoInicio from "../../../assets/fotoinicio.jpg";
 import FotoInicio2 from "../../../assets/fotoinicio2.jpeg";
 import "./TextoHome.css";
+import './TextoHomeTablet.css';
+import './TextoHomeCelular.css';
 
 function TextoHome() {
   return (

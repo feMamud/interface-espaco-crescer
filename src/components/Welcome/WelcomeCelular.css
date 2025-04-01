@@ -1,0 +1,86 @@
+@media (min-width: 300px) and (max-width: 700px) {
+  .img-fundo-welcome {
+    padding-top: 8vh; /* Ajuste para não distorcer a imagem */
+  }
+
+  .letras-logo-welcome{
+    position: absolute;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding-top: 12vh;
+    padding-left: 23vh;
+    z-index: 1; /* Garante que esta div fique acima da 'mae-txt-home' */
+  }
+
+  .img-logosozinha-welcome {
+    width: 12vh;
+  }
+  
+  .img-r-welcome {
+    position: absolute;
+    width: 2.9vh;
+    padding-right: 22vh;
+  }
+  
+  .img-e-welcome {
+    position: absolute;
+    width: 3.7vh;
+    padding-right: 15vh;
+  }
+  
+  .img-s-welcome {
+    position: absolute;
+    width: 3.1vh;
+    padding-right: 9vh;
+  }
+  
+  .img-c-welcome {
+    position: absolute;
+    width: 3.3vh;
+    padding-right: 2.5vh;
+  }
+  
+  .img-e-2-welcome {
+    position: absolute;
+    width: 3.7vh;
+    padding-left: 17vh;
+  }
+  
+  .img-r-2-welcome {
+    position: absolute;
+    width: 2.8vh;
+    padding-left: 20vh;
+  }
+  
+  .h1-1-letras-welcome,
+  .h1-2-letras-welcome,
+  .h1-3-letras-welcome,
+  .h1-4-letras-welcome {
+    font-size: 4vh;
+    position: absolute;
+  }
+  
+  
+  /* Mantendo os valores de padding-top e padding-left */
+  .h1-1-letras-welcome {
+    padding-bottom: 42vh;
+    padding-left: 3vh;
+  }
+  
+  .h1-2-letras-welcome {
+    padding-bottom: 42vh;
+    padding-left: 20vh;
+  }
+  
+  .h1-3-letras-welcome {
+    padding-bottom: 35vh;
+    padding-right: 16vh;
+  }
+  
+  .h1-4-letras-welcome {
+    padding-bottom: 34vh;
+    padding-left: 16vh;
+  }
+  
+}

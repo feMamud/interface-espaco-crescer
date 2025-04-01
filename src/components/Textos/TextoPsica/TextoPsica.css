@@ -10,8 +10,8 @@
 .paragrafo-TextoPsica-1 {
     width: 89vw;
     margin-left: 3vw;
-    margin-bottom: 2rem;
-    padding: 2rem; /* Espaçamento uniforme */
+    margin-bottom: 2vw;
+    padding: 2vw; /* Espaçamento uniforme */
     background: linear-gradient(to bottom, #a6c8e1, #e9d7c6); /* Branco para rosa */
     border-radius: 1rem;
     box-shadow: 0 0.25rem 0.5rem rgba(94, 94, 94, 0.2);
@@ -22,15 +22,15 @@
 .h1-TextoPsica-1 {
     margin: 0 auto; /* Garante alinhamento central */
     color: black;
-    font-size: 2.5rem;
+    font-size: 2.95vw;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .p-TextoPsica-1 {
     color: black;
-    font-size: 1.3rem;
-    padding-bottom: 2rem;
+    font-size: 1.6vw;
+    padding-bottom: 2vw;
 }
 
 .container-TextoPsica-2 {
@@ -38,15 +38,15 @@
     align-items: center;
     justify-content: space-between; /* Separa a descrição e a galeria */
     flex-wrap: wrap; /* Para garantir adaptação em telas menores */
-    margin-bottom: 22vw;
+    margin-bottom: 18vw;
 }
 
 .paragrafo-TextoPsica-2 {
     width: 45vw; /* Ajuste para manter a proporção */
     margin-left: 3vw;
-    padding: 2rem;
+    padding: 2vw;
     background-color: #e9d7c6;
-    border-radius: 1rem;
+    border-radius: 1vw;
     box-shadow: 0 0.25rem 5rem rgba(94, 94, 94, 0.2);
     z-index: 2;
     text-align: center;
@@ -56,7 +56,6 @@
 .galeria-TextoPsica {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Espaçamento entre imagens */
     width: 30vw; /* Ajuste conforme necessidade */
     align-items: center;
     margin-right: 3vw; /* Espaço à direita */
@@ -66,44 +65,44 @@
 .img-TextoPsica-4 {
     width: 100%; /* Imagens se ajustam à largura da galeria */
     max-width: 20vw; /* Evita que fiquem grandes demais */
-    border-radius: 0.5rem;
+    border-radius: 0.5vw;
 }
 
 .img-TextoPsica-2,
 .img-TextoPsica-3 {
     width: 100%; /* Imagens se ajustam à largura da galeria */
     max-width: 25vw; /* Evita que fiquem grandes demais */
-    border-radius: 0.5rem;
+    border-radius: 0.5vw;
 }
 
 .img-TextoPsica-1{
     position: relative;
-    top: -14rem;
+    top: -19vw;
     margin-right: 20vw;
 }
 
 .img-TextoPsica-2{
     position: absolute;
     margin-right: 18vw;
-    margin-top: 1.7vw;
+    margin-top: -1vw;
 }
 
 .img-TextoPsica-3{
     position: absolute;
     margin-right: 18vw;
-    margin-top: 18vw;
+    margin-top: 16vw;
 }
 
 .img-TextoPsica-4{
     position: absolute;
     margin-right: 18vw;
-    margin-top: 36vw;
+    margin-top: 34vw;
 }
 
 .h1-TextoPsica-2 {
     margin: 0 auto; /* Garante alinhamento central */
     color: black;
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -112,7 +111,7 @@
     margin: 0 auto; /* Garante alinhamento central */
     color: black;
     margin-top: 0.2rem;
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -122,4 +121,22 @@
 .img-TextoPsica-3,
 .img-TextoPsica-4 {
     width: 30vw;
+}
+
+@media (min-width: 1300px) and (max-width: 2560px) {
+    .mae-TextoPsica{
+        position: relative;
+        top: 0vw;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 2560px) {
+    .mae-TextoPsica{
+        position: relative;
+        top: -5vw;
+    }
+    
+    .container-TextoPsica-2{
+        margin-bottom: 14vw;
+    }
 }

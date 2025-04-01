@@ -11,6 +11,8 @@ import ferramentas from "../../../assets/ferramentas.jpeg";
 import doces from "../../../assets/doces.jpeg";
 import header2 from '../../../assets/header2.jpeg';
 import "./TextoEspaco.css";
+import './TextoEspacoTablet.css';
+import './TextoEspacoCelular.css';
 
 function TextoEspaco() {
   useTextoEspacoAnimations(); // Ativa as animações ao carregar o componente
@@ -24,7 +26,7 @@ function TextoEspaco() {
         </h1>
         <div className="paragrafo-txt-espaco-1">
           <p className="texto-txt-espaco-1">
-            Localizado em um prédio moderno em Sertãozinho/SP, o Espaço Crescer
+            Localizado em um prédio tradicional em Sertãozinho/SP, o Espaço Crescer
             foi cuidadosamente projetado para oferecer um ambiente ideal para o
             crescimento pessoal e emocional. Desde sua inauguração em outubro de
             2020, o Crescer tem se destacado por seu compromisso em proporcionar

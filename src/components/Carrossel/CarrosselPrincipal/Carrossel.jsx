@@ -8,6 +8,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Carrossel.css';
+import './CarrosselTablet.css';
+import './CarrosselCelular.css';
 
 const Carrossel = () => {
   const slides = [

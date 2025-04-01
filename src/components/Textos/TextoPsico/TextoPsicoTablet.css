@@ -1,0 +1,63 @@
+@media (min-height: 1085px) and (max-height: 1400px) {
+  .mae-textopsico {
+    position: relative;
+    top: -2vh;
+  }
+
+  .h1-textopsico-1 {
+    font-size: 4vw;
+  }
+
+  .p-textopsico-1 {
+    color: black;
+    font-size: 2.8vw;
+  }
+
+  .container-textopsico-2 {
+    margin-bottom: 10vw;
+  }
+
+  /* Galeria posicionada ao lado direito */
+  .galeria-textopsico {
+    position: relative;
+    top: -20vh;
+  }
+
+  .img-textopsico-1,
+  .img-textopsico-4 {
+    width: 100%; /* Imagens se ajustam à largura da galeria */
+    max-width: 20vh; /* Evita que fiquem grandes demais */
+    border-radius: 0.5rem;
+  }
+
+  .img-textopsico-2,
+  .img-textopsico-3 {
+    width: 100%; /* Imagens se ajustam à largura da galeria */
+    max-width: 25vh; /* Evita que fiquem grandes demais */
+    border-radius: 0.5rem;
+  }
+
+  .img-textopsico-1 {
+    position: relative;
+    top: -14vw;
+    margin-right: 20vw;
+  }
+
+  .img-textopsico-2 {
+    position: absolute;
+    margin-right: 18vw;
+    margin-top: 10vw;
+  }
+
+  .img-textopsico-3 {
+    position: absolute;
+    margin-right: 18vw;
+    margin-top: 28vw;
+  }
+
+  .img-textopsico-4 {
+    position: absolute;
+    margin-right: 18vw;
+    margin-top: 53vw;
+  }
+}

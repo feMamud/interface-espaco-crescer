@@ -1,5 +1,7 @@
 import Maria from "../../assets/maria.png";
 import "./FundoMaria.css";
+import './FundoMariaTablet.css';
+import './FundoMariaCelular.css';
 import useFundoMariaAnimations from "./FundoMariaAnimations"; // Importe o hook
 
 function FundoMaria() {

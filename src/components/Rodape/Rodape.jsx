@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom'; // Se estiver usando React Router
+import { useState } from 'react';
 import logo from '../../assets/logo-site.png';
 import feMamud from '../../assets/feMamud.png';
 import './Rodape.css';
+import './RodapeTablet.css';
+import './RodapeCelular.css';
 
 function Rodape() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   return (
     <footer className="rodape">
       <div className="container-rodape">
@@ -19,10 +23,18 @@ function Rodape() {
         </div>
         <div className="links-rodape">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/espaco">Sobre</a></li>
+            <li className="menu-servicos">
+              <button onClick={() => setMenuAberto(!menuAberto)} className="btn-servicos">Serviços</button>
+              {menuAberto && (
+                <ul className="submenu">
+                  <li><a href="/psicopedagogia">Psicopedagogia</a></li>
+                  <li><a href="/psicanalise">Psicanálise</a></li>
+                </ul>
+              )}
+            </li>
+            <li><a href="/contato">Contato</a></li>
           </ul>
         </div>
       </div>

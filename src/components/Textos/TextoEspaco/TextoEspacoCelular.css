@@ -1,0 +1,72 @@
+@media (min-width: 300px) and (max-width: 700px) {
+  .mae-txt-espaco {
+    top: -4vh; /* Ajuste o valor conforme necessário */
+  }
+
+  .container-txt-h1-1 {
+    padding-top: 1rem;
+    font-size: 3vh;
+  }
+
+  .texto-txt-espaco-1 {
+    color: black;
+    font-size: 2.3vh;
+    padding-bottom: 2.5vw;
+  }
+
+  .containers-imgs,
+  .galeria-img {
+    display: flex;
+    flex-direction: column; /* Coloca as imagens em coluna */
+    align-items: center; /* Centraliza as imagens */
+    gap: 1rem; /* Espaço entre as imagens */
+  }
+
+  /* Estilização do contêiner de cada imagem */
+.containers-img-div {
+    width: 35vh; /* Largura máxima de 300px, mas ajustável em telas menores */
+  }
+
+  /* Estilização das imagens */
+.containers-imgs-imgs {
+    position: relative;
+    top: -3vh;
+    width: 100%; /* Mantém a imagem responsiva dentro do contêiner */
+    height: auto; /* Mantém a proporção original */
+    border-radius: 1vh; /* Borda levemente arredondada */
+    box-shadow: 0 0.25rem 0.5rem rgba(94, 94, 94, 0.2); /* 4px e 8px em rem */
+  }
+
+  .paragrafo-img-txt-espaco-1 {
+    display: flex;
+    flex-direction: column; /* Coloca as imagens em coluna */
+    align-items: center; /* Centraliza as imagens */
+  }
+
+  .container1-txt-espaco-1 {
+    position: relative;
+    top: -10vh;
+    padding: 2.4vw;
+    border-radius: 1vw; /* Bordas arredondadas responsivas */
+    text-align: center;
+    width: 80%;
+    background: #e9d7c6;
+  }
+
+  .container-txt-h1-2 {
+    font-size: 3vh;
+  }
+
+  .galeria-img{
+    display: none;
+  }
+
+  .img-header{
+    position: relative;
+    top: -5vh;
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 1vw;
+  }
+  
+}

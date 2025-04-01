@@ -10,7 +10,7 @@
 
 .mae-txt-home {
   position: relative;
-  top: -16vh; /* Ajuste o valor conforme necessário */
+  top: -4vw; /* Ajuste o valor conforme necessário */
   z-index: 0; /* Garante que essa div fique abaixo de outros elementos */
 }
 
@@ -27,19 +27,19 @@
 
 .titulo-txt-home-1 {
   color: black;
-  font-size: 2rem;
+  font-size: 2.6vw;
   padding-top: 3rem;
 }
 
 .texto1-txt-home-1 {
   color: black;
-  font-size: 1.3rem;
+  font-size: 1.65vw;
   padding-bottom: 2rem;
 }
 
 .texto2-txt-home-1 {
   color: black;
-  font-size: 1.3rem;
+  font-size: 1.65vw;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
@@ -96,14 +96,28 @@
   z-index: -1;
 }
 
-/* Texto do segundo container */
-.texto2-txt-home-1 {
-  color: black;
-  font-size: 1.3rem;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+@media (min-width: 1400px) and (max-width: 2560px) {
+  .foto-inicio-1 {
+    width: 30vw;
+    top: -15vw;
+  }
+  .foto-inicio-2 {
+    width: 30vw;
+    margin-left: 8vw;
+    margin-top: 10vh;
+  }
 }
 
+@media (min-width: 480px) and (max-width: 768px) {
+  .foto-inicio-1 {
+    width: 30vw;
+  }
+  .foto-inicio-2 {
+    width: 30vw;
+    margin-left: 8vw;
+    margin-top: 40vh;
+  }
+}
 
 @media (min-width: 480px) and (max-width: 768px) {
   .foto-inicio-1 {

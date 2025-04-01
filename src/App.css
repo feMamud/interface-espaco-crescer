@@ -41,3 +41,14 @@ html, body {
   overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
+/* Pequenos dispositivos (phones, 600px pra baixo) */
+@media only screen and (max-width: 600px) {}
+
+/* Dispositivos médios (tablets, 768px pra baixo) */
+@media only screen and (max-width: 768px) {}
+
+/* Grandes dispositivos (laptops/desktops, 992px pra baixo) */
+@media only screen and (max-width: 992px) {}
+
+/* Extra grandes (telas grandes, 1200px pra baixo) */
+@media only screen and (max-width: 1200px) {}

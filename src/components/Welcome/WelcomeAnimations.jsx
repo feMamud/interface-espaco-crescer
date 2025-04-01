@@ -4,20 +4,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export function WelcomeAnimations(refs) {
-  // Cria um contexto de matchMedia para responsividade
   const mm = gsap.matchMedia();
 
-  // Definições para telas maiores que 480px
-  mm.add('(min-width: 481px)', () => {
+  // Definições para telas maiores que 1030px
+  mm.add('(min-width: 1031px)', () => {
     // Animação do fundo ao rolar para baixo
     gsap.to(refs.fundo.current, {
-      y: -200, // Move o fundo para cima
-      scale: 1.1, // Leve zoom
+      y: -200,
+      scale: 1.1,
       duration: 2,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: refs.fundo.current,
-        start: 'center center', // Quando o meio do fundo estiver no meio da tela
+        start: 'center center',
         end: 'bottom top',
         scrub: true,
       },
@@ -25,10 +24,10 @@ export function WelcomeAnimations(refs) {
 
     // Animação para as imagens
     gsap.to(refs.images.map(ref => ref.current), {
-      y: -150, // Move para cima
+      y: -150,
       duration: 1.5,
       ease: 'power2.out',
-      stagger: 0.2, // Saem em sequência
+      stagger: 0.2,
       scrollTrigger: {
         trigger: refs.images[0].current,
         start: 'top 34%',
@@ -63,15 +62,91 @@ export function WelcomeAnimations(refs) {
     });
   });
 
-  // Definições para telas menores que 480px (desativa as animações)
-  mm.add('(max-width: 480px)', () => {
-    // Não aplica nenhuma animação
-    console.log('Animações desativadas para telas menores que 480px');
+    // Definições para telas maiores que 1030px
+    mm.add('(min-width: 2048px) and (max-width: 3840px)', () => {
+      // Animação do fundo ao rolar para baixo
+      gsap.to(refs.fundo.current, {
+        y: -200,
+        scale: 1.1,
+        duration: 2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: refs.fundo.current,
+          start: 'center center',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
+  
+      // Animação para as imagens
+      gsap.to(refs.images.map(ref => ref.current), {
+        y: -150,
+        duration: 1.5,
+        ease: 'power2.out',
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: refs.images[0].current,
+          start: 'top 34%',
+          end: 'top',
+          scrub: true,
+        },
+      });
+  
+      // Animação para os textos
+      gsap.to(refs.texts.map(ref => ref.current), {
+        y: -100,
+        duration: 1.5,
+        ease: 'power2.out',
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: refs.texts[0].current,
+          start: 'top 34%',
+          end: 'top -10%',
+          scrub: true,
+        },
+      });
+  
+      // Animação reversa ao rolar para cima
+      gsap.to([...refs.images, ...refs.texts].map(ref => ref.current), {
+        y: 0,
+        scrollTrigger: {
+          trigger: refs.images[0].current,
+          start: 'bottom 20%',
+          end: 'top center',
+          scrub: true,
+        },
+      });
+    });
+
+  // Desativa animações para 1030px ou menos
+  mm.add('(max-width: 1030px)', () => {
+    console.log('Animações desativadas para telas até 1030px de largura');
+    
+    // Reseta todas as propriedades animadas
+    gsap.set([
+      refs.fundo.current,
+      ...refs.images.map(ref => ref.current),
+      ...refs.texts.map(ref => ref.current)
+    ], {
+      y: 0,
+      scale: 1,
+      opacity: 1
+    });
+
+    // Mata todos os ScrollTriggers relacionados
+    ScrollTrigger.getAll().forEach(trigger => {
+      if ([
+        refs.fundo.current,
+        ...refs.images.map(ref => ref.current),
+        ...refs.texts.map(ref => ref.current)
+      ].includes(trigger.trigger)) {
+        trigger.kill();
+      }
+    });
   });
 
-  // Limpeza quando o componente é desmontado
   return () => {
-    mm.revert(); // Reverte todas as animações e listeners do matchMedia
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Limpa os ScrollTriggers
+    mm.revert();
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   };
 }

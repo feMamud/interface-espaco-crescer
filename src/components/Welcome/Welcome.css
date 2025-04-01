@@ -127,200 +127,22 @@
   padding-left: 48vw;
 }
 
-/* Para telas pequenas (smartphones em modo retrato) */
-@media (max-width: 480px) {
-
-  .img-fundo-welcome{
-    height: 70vh;
-  }
-
-  .letras-logo-welcome {
+@media (min-width: 2048px) and (max-width: 3840px) {
+  .letras-logo-welcome{
     position: absolute;
-    top: 20vw;
-    padding-left: 40vw;
-  }
-  .img-logosozinha-welcome {
-    width: 8rem;
-    padding-bottom: 100vw;
-    padding-right: 15vw;
-  }
-  .img-r-welcome {
-    width: 8vw;
-    padding-bottom: 100vw;
-    padding-left: 57vw;
-  }
-  .img-e-welcome {
-    width: 9vw;
-    padding-bottom: 100vw;
-    padding-left: 69vw;
-  }
-  .img-s-welcome {
-    width: 8vw;
-    padding-bottom: 100vw;
-    padding-left: 80vw;
-  }
-  .img-c-welcome {
-    width: 8.5vw;
-    padding-bottom: 100vw;
-    padding-left: 90vw;
-  }
-  .img-e-2-welcome {
-    width: 9vw;
-    padding-bottom: 100vw;
-    padding-left: 102vw;
-  }
-  .img-r-2-welcome {
-    width: 8vw;
-    padding-bottom: 100vw;
-    padding-left: 114vw;
-  }
-  .h1-1-letras-welcome,
-  .h1-2-letras-welcome,
-  .h1-3-letras-welcome,
-  .h1-4-letras-welcome {
-    padding-top: 30vh;
-    font-size: 11vw;
-  }
-  .h1-1-letras-welcome{
-    padding-top: 37vw;
-    padding-right: 48vw;
-  }
-  .h1-2-letras-welcome{
-    padding-left: 25vw;
-  }
-  .h1-3-letras-welcome{
-    padding-top: 40vh;
-    padding-right: 50vw;
-  }  .h1-4-letras-welcome{
-    padding-top: 40vh;
-    padding-right: 10vw;
-  }
-}
-
-/* Para telas médias (tablets em modo retrato) */
-@media (min-width: 481px) and (max-width: 580px) {
-  .img-fundo-welcome{
-    height: 100vh;
-  }
-
-  .letras-logo-welcome {
-    padding-top: 1vh;
-    padding-left: 50vw;
-  }
-
-}
-
-/* Para telas médias (tablets em modo retrato) */
-@media (min-width: 580px) and (max-width: 768px) {
-    .img-fundo-welcome{
-      height: 100vh;
-    }
-  
-  .letras-logo-welcome {
-    padding-top: 20vh;
-    padding-left: 42vw;
-  }
-
-  .img-logosozinha-welcome {
-    width: 8rem;
-    padding-bottom: 105vw;
-    padding-right: 55vw;
-  }
-  .img-r-welcome {
-    width: 4vw;
-    padding-bottom: 107vw;
-    padding-right: 47vw;
-  }
-  .img-e-welcome {
-    width: 5vw;
-    padding-bottom: 107vw;
-    padding-right: 37vw;
-  }
-  .img-s-welcome {
-    width: 4.3vw;
-    padding-bottom: 107vw;
-    padding-right: 29vw;
-  }
-  .img-c-welcome {
-    width: 4.7vw;
-    padding-bottom: 107vw;
-    padding-right: 20vw;
-  }
-  .img-e-2-welcome {
-    width: 5vw;
-    padding-bottom: 107vw;
-    padding-right: 10vw;
-  }
-  .img-r-2-welcome {
-    width: 4.3vw;
-    padding-bottom: 107vw;
-    padding-right: 1vw;
-  }
-  .h1-1-letras-welcome,
-  .h1-2-letras-welcome,
-  .h1-3-letras-welcome,
-  .h1-4-letras-welcome {
-    padding-top: 5vh;
-    font-size: 6vw;
-  }
-}
-
-/* Para telas grandes (tablets em modo paisagem e desktops) */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .img-fundo-welcome{
-    height: 100vh;
-  }
-
-  .letras-logo-welcome {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     padding-top: 45vh;
     padding-left: 45vw;
+    z-index: 1; /* Garante que esta div fique acima da 'mae-txt-home' */
   }
+
   .img-logosozinha-welcome {
+    position: absolute;
     width: 10rem;
     padding-bottom: 110vw;
-    padding-right: 60vw;
-  }
-  .img-r-welcome {
-    width: 2.9vw;
-    padding-bottom: 109vw;
-    padding-right: 55vw;
-  }
-  .img-e-welcome {
-    width: 3.7vw;
-    padding-bottom: 109vw;
-    padding-right: 48vw;
-  }
-  .img-s-welcome {
-    width: 3.1vw;
-    padding-bottom: 109vw;
-    padding-right: 41vw;
-  }
-  .img-c-welcome {
-    width: 3.3vw;
-    padding-bottom: 109vw;
-    padding-right: 34vw;
-  }
-  .img-e-2-welcome {
-    width: 3.7vw;
-    padding-bottom: 109vw;
-    padding-right: 27vw;
-  }
-  .img-r-2-welcome {
-    width: 2.8vw;
-    padding-bottom: 109vw;
-    padding-right: 20vw;
-  }
-  .h1-1-letras-welcome,
-  .h1-2-letras-welcome,
-  .h1-3-letras-welcome,
-  .h1-4-letras-welcome {
-    font-size: 5.5vw;
-  }
-}
-
-/* Coisas expecíficas */
-@media (min-width: 769px) and (max-width: 920px) {
-  .letras-logo-welcome{
-    padding-top: 35vh;
+    padding-right: 63vw;
+    transition: transform 0.1s ease, opacity 0.3s ease; /* Adicionando transição para transform e opacidade */
   }
 }

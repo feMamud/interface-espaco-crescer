@@ -8,6 +8,8 @@ import e from '../../assets/e.png';
 import s from '../../assets/s.png';
 import c from '../../assets/c.png';
 import './Welcome.css';
+import './WelcomeTablet.css';
+import './WelcomeCelular.css';
 
 function Welcome() {
   const refs = {

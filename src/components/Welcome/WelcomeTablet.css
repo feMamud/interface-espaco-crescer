@@ -1,0 +1,22 @@
+@media (min-height: 1085px) and (max-height: 1400px) {
+    .img-fundo-welcome {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: auto; /* Garante que a altura seja proporcional à largura */
+        padding-top: 0; /* Ajuste para não distorcer a imagem */
+        z-index: 1;
+        transition: transform 0.2s ease;
+        object-fit: cover; /* Faz a imagem cobrir toda a área sem distorcer */
+      }
+
+      .letras-logo-welcome{
+        position: absolute;
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        padding-top: 25vh;
+        padding-left: 45vw;
+        z-index: 1; /* Garante que esta div fique acima da 'mae-txt-home' */
+      }
+}
