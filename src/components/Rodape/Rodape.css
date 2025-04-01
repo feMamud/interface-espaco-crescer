@@ -1,170 +1,177 @@
 /* Rodapé Profissional */
 .rodape {
-  position: relative;
-  bottom: 0;
-  background-color: #d4c4b4;
-  color: #000000;
-  padding: 3vw 0;
-  font-family: "Arial", sans-serif;
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  border-top: 0.3vw solid var(--marrom-claro);
+  position: relative; /* Posiciona o rodapé de forma relativa */
+  bottom: 0; /* Fixa o rodapé na parte inferior */
+  background-color: #d4c4b4; /* Cor de fundo do rodapé */
+  color: #000000; /* Cor do texto no rodapé */
+  padding: 3vw 0; /* Espaçamento interno (topo e fundo) de 3vw */
+  font-family: "Arial", sans-serif; /* Fonte utilizada no rodapé */
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Sombra do rodapé */
+  transition: all 0.3s ease-in-out; /* Transição suave para mudanças de estilo */
+  border-top: 0.3vw solid var(--marrom-claro); /* Borda superior com cor definida pela variável */
 }
 
-/* Container centralizador */
+/* Container centralizador do rodapé */
 .container-rodape {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 85vw;
-  margin: 0 auto;
-  padding: 0 2vw;
-  flex-wrap: wrap;
+  display: flex; /* Flexbox para layout flexível */
+  justify-content: space-between; /* Espaça os itens igualmente ao longo da largura */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  max-width: 85vw; /* Largura máxima de 85% da largura da tela */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 2vw; /* Espaçamento interno nas laterais */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
 }
 
-/* Logo do Rodapé */
+/* Logo do rodapé */
 .logo-rodape img {
-  width: 10vw;
-  height: auto;
-  filter: drop-shadow(0 0.2vw 0.5vw rgba(0, 0, 0, 0.2));
-  transition: transform 0.3s ease-in-out;
+  width: 10vw; /* Largura da imagem de 10% da largura da tela */
+  height: auto; /* Altura proporcional à largura da imagem */
+  filter: drop-shadow(0 0.2vw 0.5vw rgba(0, 0, 0, 0.2)); /* Sombra na imagem */
+  transition: transform 0.3s ease-in-out; /* Transição suave para transformação */
 }
 
+/* Efeito de hover na imagem do logo */
 .logo-rodape img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
 }
 
 /* Texto do rodapé */
 .informacoes-rodape .texto-rodape {
-  font-size: 1.3vw;
-  text-align: center;
-  margin: 1vw 0;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 1.3vw; /* Tamanho da fonte relativo à largura da tela */
+  text-align: center; /* Centraliza o texto */
+  margin: 1vw 0; /* Margem vertical de 1vw */
+  font-weight: 500; /* Peso da fonte */
+  line-height: 1.5; /* Altura da linha para melhorar a legibilidade */
 }
 
 /* Links do rodapé */
 .links-rodape ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2vw;
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding da lista */
+  margin: 0; /* Remove a margem da lista */
+  display: flex; /* Exibe os itens da lista em linha */
+  gap: 2vw; /* Espaço entre os itens da lista */
 }
 
+/* Estilo dos links no rodapé */
 .links-rodape a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 1.3vw;
-  font-weight: 600;
-  letter-spacing: 0.05vw;
-  transition: color 0.3s ease, transform 0.3s ease;
+  color: #000000; /* Cor do link */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-size: 1.3vw; /* Tamanho da fonte relativo à largura da tela */
+  font-weight: 600; /* Peso da fonte */
+  letter-spacing: 0.05vw; /* Espaçamento entre as letras */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave para cor e transformação */
 }
 
+/* Efeito de hover nos links do rodapé */
 .links-rodape a:hover {
-  color: #82fc4c;
-  transform: scale(1.1);
-  text-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.15);
+  color: #82fc4c; /* Muda a cor do link ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho do link */
+  text-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.15); /* Adiciona uma sombra no texto */
 }
 
 /* Rodapé inferior (informações do desenvolvedor) */
 .desenvolvedor {
-  text-align: center;
-  margin-top: 1.5vw;
-  font-size: 1.2vw;
-  color: #000000;
-  border-top: 0.2vw solid rgba(0, 0, 0, 0.1);
-  padding-top: 1.5vw;
+  text-align: center; /* Centraliza o texto */
+  margin-top: 1.5vw; /* Margem superior de 1.5vw */
+  font-size: 1.2vw; /* Tamanho da fonte relativo à largura da tela */
+  color: #000000; /* Cor do texto */
+  border-top: 0.2vw solid rgba(0, 0, 0, 0.1); /* Borda superior suave */
+  padding-top: 1.5vw; /* Espaçamento superior de 1.5vw */
 }
 
+/* Estilo para o texto dentro da seção de desenvolvedor */
 .desenvolvedor p {
-  font-size: 1.2vw;
+  font-size: 1.2vw; /* Tamanho da fonte do parágrafo */
 }
 
+/* Estilo dos links na seção de desenvolvedor */
 .desenvolvedor a {
-  color: #00ccff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  color: #00ccff; /* Cor do link */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: 600; /* Peso da fonte */
+  transition: color 0.3s ease; /* Transição suave para a cor */
 }
 
+/* Efeito de hover nos links do desenvolvedor */
 .desenvolvedor a:hover {
-  color: #82fc4c;
+  color: #82fc4c; /* Muda a cor do link ao passar o mouse */
 }
 
+/* Imagem "femamud" */
 .femamud {
-  position: relative;
-  top: 1.4vw;
-  margin-left: 0.5vw;
-  width: 9vh;
-  transition: transform 0.3s ease-in-out;
+  position: relative; /* Posicionamento relativo */
+  top: 1.4vw; /* Ajuste vertical da imagem */
+  margin-left: 0.5vw; /* Ajuste da margem à esquerda */
+  width: 9vh; /* Largura relativa da imagem */
+  transition: transform 0.3s ease-in-out; /* Transição suave para a transformação */
 }
 
+/* Efeito de hover na imagem "femamud" */
 .femamud:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
 }
 
-/* Menu Serviços */
+/* Menu de Serviços */
 .menu-servicos {
-  position: relative;
-  display: inline-block;
+  position: relative; /* Posicionamento relativo para o submenu */
+  display: inline-block; /* Exibe o menu de serviços como bloco inline */
 }
 
+/* Botão de serviços */
 .btn-servicos {
-  background: none;
-  border: none;
-  font-size: 1.3vw;
-  font-weight: 600;
-  letter-spacing: 0.05vw;
-  cursor: pointer;
-  color: #000000;
-  border-top: 0.2vw solid rgba(0, 0, 0, 0);
-  transition: color 0.3s ease, transform 0.3s ease;
+  background: none; /* Remove o fundo do botão */
+  border: none; /* Remove a borda do botão */
+  font-size: 1.3vw; /* Tamanho da fonte relativo à largura da tela */
+  font-weight: 600; /* Peso da fonte */
+  letter-spacing: 0.05vw; /* Espaçamento entre as letras */
+  cursor: pointer; /* Adiciona o cursor de ponteiro */
+  color: #000000; /* Cor do texto do botão */
+  border-top: 0.2vw solid rgba(0, 0, 0, 0); /* Borda superior invisível */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave para cor e transformação */
 }
 
+/* Efeito de hover no botão de serviços */
 .btn-servicos:hover {
-  color: #82fc4c;
-  transform: scale(1.1);
+  color: #82fc4c; /* Muda a cor do botão ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho do botão */
 }
 
-/* Submenu de Serviços */
-/* Ajuste no container do menu */
-.menu-servicos {
-  position: relative; /* Garante que o submenu fique posicionado em relação a este elemento */
-}
-
-/* Submenu de Serviços */
+/* Submenu de serviços */
 .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0; /* Ponto de partida na esquerda do botão */
-  transform: translateX(-20%); /* Move 20% para a esquerda */
-  background-color: #d4c4b4;
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
-  border-radius: 0.5vw;
-  width: max-content;
-  min-width: 12vw;
-  z-index: 10;
-  padding: 0;
-  list-style: none;
+  position: absolute; /* Posiciona o submenu de forma absoluta */
+  top: 100%; /* Coloca o submenu abaixo do botão */
+  left: 0; /* Posição inicial na esquerda */
+  transform: translateX(-20%); /* Move o submenu 20% para a esquerda */
+  background-color: #d4c4b4; /* Cor de fundo do submenu */
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Sombra no submenu */
+  border-radius: 0.5vw; /* Bordas arredondadas */
+  width: max-content; /* Largura ajustada ao conteúdo */
+  min-width: 12vw; /* Largura mínima de 12vw */
+  z-index: 10; /* Garante que o submenu fique acima dos outros elementos */
+  padding: 0; /* Remove o padding do submenu */
+  list-style: none; /* Remove os marcadores da lista */
 }
 
+/* Itens do submenu */
 .submenu li {
-  width: 100%;
+  width: 100%; /* Largura total para cada item */
 }
 
+/* Links dentro do submenu */
 .submenu a {
-  display: block;
-  padding: 0.8vw 1.5vw;
-  text-decoration: none;
-  color: #000000;
-  font-size: 1.2vw;
-  transition: background 0.3s ease, color 0.3s ease;
+  display: block; /* Exibe os links como blocos */
+  padding: 0.8vw 1.5vw; /* Padding interno do link */
+  text-decoration: none; /* Remove o sublinhado */
+  color: #000000; /* Cor do texto */
+  font-size: 1.2vw; /* Tamanho da fonte */
+  transition: background 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor */
 }
 
+/* Efeito de hover nos links do submenu */
 .submenu a:hover {
-  background-color: #a8d5ba;
-  color: #fff;
+  background-color: #a8d5ba; /* Muda o fundo ao passar o mouse */
+  color: #fff; /* Muda a cor do texto ao passar o mouse */
 }
 
 @media (min-width: 2048px) and (max-width: 3840px) {

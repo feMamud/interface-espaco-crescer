@@ -1,65 +1,72 @@
+/* Estilo para dispositivos com largura entre 300px e 700px */
 @media (min-width: 300px) and (max-width: 700px) {
+  /* Rodapé: Ajusta o padding e a borda superior */
   .rodape {
-    padding: 3vh 0;
-    border-top: 0.3vh solid var(--marrom-claro);
+    padding: 3vh 0; /* Espaçamento no topo e embaixo */
+    border-top: 0.3vh solid var(--marrom-claro); /* Borda superior */
   }
 
-  /* Container centralizador */
+  /* Container que centraliza o conteúdo do rodapé */
   .container-rodape {
-    max-width: 85vh;
-    padding: 0 2vh;
+    max-width: 85vh; /* Largura máxima do container, ajustada em relação à altura */
+    padding: 0 2vh; /* Padding interno no container */
   }
 
-  /* Logo do Rodapé */
+  /* Logo do rodapé: Ajusta o tamanho da imagem */
   .logo-rodape img {
-    width: 8vh;
+    width: 8vh; /* Largura da imagem do logo */
   }
 
-  /* Texto do rodapé */
+  /* Texto do rodapé: Ajuste do tamanho da fonte */
   .informacoes-rodape .texto-rodape {
-    font-size: 1.6vh;
-    margin: 1vh 0;
+    font-size: 1.6vh; /* Tamanho da fonte ajustado */
+    margin: 1vh 0; /* Margem superior e inferior */
   }
 
+  /* Links do rodapé: Alinha e ajusta o espaçamento */
   .links-rodape {
     position: absolute;
-    padding-left: 9vh;
-    padding-bottom: 6vh;
+    padding-left: 9vh; /* Ajusta o padding à esquerda */
+    padding-bottom: 6vh; /* Ajusta o padding no fundo */
   }
 
-  /* Links do rodapé */
-.links-rodape ul {
-    gap: 2vh;
+  /* Estilo dos itens de lista dentro dos links */
+  .links-rodape ul {
+    gap: 2vh; /* Espaçamento entre os itens da lista */
   }
-  
+
+  /* Links individuais do rodapé: Ajusta o tamanho da fonte e o espaçamento das letras */
   .links-rodape a {
-    font-size: 1.8vh;
-    letter-spacing: 0.05vh;
-  }
-  
-  .desenvolvedor p {
-    font-size: 1.6vh;
+    font-size: 1.8vh; /* Tamanho da fonte ajustado */
+    letter-spacing: 0.05vh; /* Espaçamento entre as letras */
   }
 
+  /* Texto do desenvolvedor: Ajusta o tamanho da fonte */
+  .desenvolvedor p {
+    font-size: 1.6vh; /* Tamanho da fonte ajustado */
+  }
+
+  /* Imagem do desenvolvedor: Ajusta o tamanho e a posição */
   .femamud {
     position: relative;
-    top: 2.4vh;
-    margin-left: 0.8vh;
-    width: 8vh;
+    top: 2.4vh; /* Ajusta a posição vertical */
+    margin-left: 0.8vh; /* Ajusta a margem à esquerda */
+    width: 8vh; /* Largura da imagem */
   }
 
+  /* Botão de serviços: Ajusta o tamanho da fonte e o padding */
   .btn-servicos {
-    font-size: 1.8vh;
-    padding-top: 0.4vw;
+    font-size: 1.8vh; /* Tamanho da fonte ajustado */
+    padding-top: 0.4vw; /* Ajuste do padding no topo */
   }
 
+  /* Links do submenu de serviços: Ajusta o padding e o estilo de transição */
   .submenu a {
-    display: block;
-    padding: 0.8vw 1.5vw;
-    text-decoration: none;
-    color: #000000;
-    font-size: 1.6vh;
-    transition: background 0.3s ease, color 0.3s ease;
+    display: block; /* Exibe cada link como um bloco */
+    padding: 0.8vw 1.5vw; /* Padding interno dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000000; /* Cor do texto */
+    font-size: 1.6vh; /* Tamanho da fonte ajustado */
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave para a cor e fundo */
   }
-
 }

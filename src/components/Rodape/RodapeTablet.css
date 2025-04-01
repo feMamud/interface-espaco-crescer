@@ -1,53 +1,63 @@
+/* Estilo para dispositivos com altura entre 1085px e 1400px */
 @media (min-height: 1085px) and (max-height: 1400px) {
+  
+  /* Ajuste do texto do rodapé */
   .informacoes-rodape .texto-rodape {
-    margin-top: 1vh;
-    padding-left: 6vh;
-    font-size: 2vh;
+    margin-top: 1vh; /* Margem superior ajustada */
+    padding-left: 6vh; /* Padding à esquerda */
+    font-size: 2vh; /* Tamanho da fonte ajustado */
   }
 
+  /* Estilo dos links no rodapé: ajusta o layout da lista */
   .links-rodape ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 2vw;
+    list-style: none; /* Remove a lista de marcadores */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+    display: flex; /* Exibe os links de forma horizontal */
+    gap: 2vw; /* Espaçamento entre os links */
   }
 
+  /* Posição e padding para a área de links do rodapé */
   .links-rodape {
-    position: absolute;
-    padding-left: 16vh;
-    padding-bottom: 9vh;
+    position: absolute; /* Posiciona de forma absoluta em relação ao container */
+    padding-left: 16vh; /* Ajuste do padding à esquerda */
+    padding-bottom: 9vh; /* Ajuste do padding inferior */
   }
 
+  /* Ajuste do tamanho da fonte dos links no rodapé */
   .links-rodape a {
-    font-size: 2.4vh;
+    font-size: 2.4vh; /* Tamanho da fonte ajustado */
   }
 
+  /* Ajuste do botão de serviços */
   .btn-servicos {
-    font-size: 2.4vh;
-    padding-top: 0.4vw;
+    font-size: 2.4vh; /* Tamanho da fonte ajustado */
+    padding-top: 0.4vw; /* Ajuste do padding superior */
   }
 
+  /* Estilo do submenu de serviços */
   .submenu a {
-    display: block;
-    padding: 0.8vw 1.5vw;
-    text-decoration: none;
-    color: #000000;
-    font-size: 1.6vh;
-    transition: background 0.3s ease, color 0.3s ease;
+    display: block; /* Exibe cada link como um bloco */
+    padding: 0.8vw 1.5vw; /* Padding interno dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000000; /* Cor do texto */
+    font-size: 1.6vh; /* Tamanho da fonte ajustado */
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave */
   }
 
+  /* Ajusta a posição da imagem do desenvolvedor */
   .femamud {
-    top: 3vh;
+    top: 3vh; /* Ajuste da posição vertical */
   }
 
-  /* Rodapé inferior (informações do desenvolvedor) */
-.desenvolvedor {
-    text-align: center;
-    margin-top: 1vw;
+  /* Estilo do rodapé inferior (informações do desenvolvedor) */
+  .desenvolvedor {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 1vw; /* Ajuste da margem superior */
   }
 
-  .desenvolvedor p{
-    font-size: 2vh;
-}
+  /* Tamanho da fonte do texto do desenvolvedor */
+  .desenvolvedor p {
+    font-size: 2vh; /* Tamanho da fonte ajustado */
+  }
 }
