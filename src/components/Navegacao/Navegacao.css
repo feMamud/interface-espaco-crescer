@@ -35,7 +35,7 @@
 }
 
 .navbar.scrolled .logo img {
-  padding-top: 2.9vw;
+  padding-top: 1.9vw;
   width: 4vw; /* Diminui a largura do logotipo quando rolado */
   height: 3vw; /* Diminui a altura do logotipo quando rolado */
 }

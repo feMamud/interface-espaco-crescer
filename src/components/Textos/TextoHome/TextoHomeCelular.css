@@ -1,8 +1,8 @@
-@media (min-width: 300px) and (max-width: 700px) {
+@media (max-width: 700px) {
   .mae-txt-home {
     top: -28vw; /* Ajuste o valor conforme necessário */
     margin-left: 0.3vh;
-    margin-bottom: 30vh;
+    margin-bottom: 1vh;
   }
 
   .foto-inicio-1 {
@@ -15,12 +15,13 @@
   .container-txt-home-2 {
     position: relative;
     margin-top: 16vh; /* Espaço entre o primeiro e o segundo container */
-    
+    margin-bottom: -18vh;
   }
 
   .foto-inicio-2 {
+    display: none;
     position: absolute;
-    top: 56.5vh;
+    top: 39vh;
   }
 }
 

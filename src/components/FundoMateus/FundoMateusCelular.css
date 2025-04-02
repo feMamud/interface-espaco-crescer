@@ -1,46 +1,81 @@
 @media (min-width: 300px) and (max-width: 700px) {
-    /* Container principal */
-    .mae-fundoMateus {
-      position: relative;
-      top: -2vh;
-      height: 35vh;
-    }
-  
-    .img-fundoMateus {
-      margin-left: 28vh;
-    }
-  
+  /* Container principal */
+  .mae-fundoMateus {
+    display: none;
+    position: relative;
+    top: 0.5vh;
+    height: 35vh;
+  }
+
+  .fundo-fundoMateus {
+    height: 22vh;
+    
+  }
+
+  .fundo-fundoMateus-2 {
+    height: 22vh;
+  }
+
+
+  .img-fundoMateus-2 {
+    position: relative;
+    right: 21vh;
+    width: 20vh;
+  }
+
+  .h1-fundoMateus-1,
+  .h1-fundoMateus-2,
+  .h1-fundoMateus-3,
+  .h1-fundoMateus-4,
+  .h1-fundoMateus-5,
+  .h1-fundoMateus-6{
+    font-size: 2vh;
+  }
+
+  /* Títulos com ajuste de +4vw */
+  .h1-fundoMateus-1 {
+    margin-left: 24vh;
+  }
+
+  .h1-fundoMateus-4 {
+    right: 20vh; /* Antes: 42vw → 44vw → agora 46vw */
+  }
+
+  .h1-fundoMateus-5 {
+    right: 19vh; /* Antes: 41vw → 43vw → agora 45vw */
+  }
+
+  .h1-fundoMateus-6 {
+    right: 30vh; /* Antes: 41vw → 43vw → agora 45vw */
+    top: 2.5vh;
+  }
+
+  .h1-fundoMateus-1 {
+    position: relative;
+    right: 9vh; /* Antes: 5vh → 7vh → agora 9vh */
+  }
+}
+
+@media (max-width: 400px) {
+  .img-fundoMateus {
+    margin-left: 18vh;
+  }
+
     /* Títulos com ajuste de +4vw */
     .h1-fundoMateus-1 {
-      right: 20vw; /* Antes: 18vw → 20vw → agora 22vw */
-    }
-  
-    .h1-fundoMateus-2 {
-      right: 47vw; /* Antes: 43vw → 45vw → agora 47vw */
-    }
-  
-    .h1-fundoMateus-3 {
-      right: 46.5vw; /* Antes: 42.5vw → 44.5vw → agora 46.5vw */
+      margin-left: 24vh;
     }
   
     .h1-fundoMateus-4 {
-      right: 46vw; /* Antes: 42vw → 44vw → agora 46vw */
+      right: 20vh; /* Antes: 42vw → 44vw → agora 46vw */
     }
   
     .h1-fundoMateus-5 {
-      right: 45vw; /* Antes: 41vw → 43vw → agora 45vw */
+      right: 19vh; /* Antes: 41vw → 43vw → agora 45vw */
     }
   
-    .h1-fundoMateus-1 {
-      position: relative;
-      right: 9vh; /* Antes: 5vh → 7vh → agora 9vh */
+    .h1-fundoMateus-6 {
+      right: 30vh; /* Antes: 41vw → 43vw → agora 45vw */
+      top: 2.5vh;
     }
-    
-  }
-  
-  @media (max-width: 400px) {
-    .img-fundoMateus {
-      margin-left: 30vh;
-    }
-  }
-  
+}

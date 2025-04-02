@@ -8,11 +8,9 @@ function Home() {
     return(
         <div className='mae-home'>
             <Navegacao />
-            <div className='home-container'>
             <Welcome />
             <TextoHome />
             <Rodape />
-            </div>{/**home-container */}
         </div>//mae-home
     )
 }

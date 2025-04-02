@@ -1,7 +1,7 @@
-@media (min-height: 1085px) and (max-height: 1400px) {
-    .mae-TextoPsica {
+@media (min-height: 1085px) and (max-height: 1400px) and (min-width: 712px) and (max-width: 1024px){
+  .mae-TextoPsica {
       position: relative;
-      top: -2vh;
+      top: -10vw;
     }
   
     .h1-TextoPsica-1 {

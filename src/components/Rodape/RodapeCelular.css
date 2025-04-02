@@ -1,5 +1,5 @@
 /* Estilo para dispositivos com largura entre 300px e 700px */
-@media (min-width: 300px) and (max-width: 700px) {
+@media (max-width: 700px) {
   /* Rodapé: Ajusta o padding e a borda superior */
   .rodape {
     padding: 3vh 0; /* Espaçamento no topo e embaixo */
