@@ -1,0 +1,125 @@
+/* Estilos gerais */
+.orgselect-mae {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(104, 91, 77, 0.5),
+    rgba(233, 215, 198, 0.5)
+  );
+  padding: 1rem;
+}
+
+/* Painel de seleção */
+.painel-orgselect {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 20vw;
+  background-color: #685b4d;
+  border-radius: 1rem;
+  gap: 1rem;
+  box-shadow: 0 0.25rem 5rem rgba(94, 94, 94, 0.2);
+  z-index: 1;
+  padding: 1rem;
+}
+
+/* Estilização padrão dos títulos */
+.h1-orgselect-1,
+.h1-orgselect-2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #19ff75;
+  text-align: center;
+}
+
+/* Posição dos títulos */
+.h1-orgselect-1 {
+  margin-top: 12vw;
+}
+
+.h1-orgselect-2 {
+  position: relative;
+  margin-top: 12vw;
+  margin-left: -1vw;
+}
+
+/* Botões */
+.orgselect-botao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  gap: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.orgselect-botao.cliente {
+  background-color: #007bff;
+  color: white;
+}
+
+.orgselect-botao.paciente {
+  background-color: #28a745;
+  color: white;
+}
+
+.orgselect-botao:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .orgselect-mae {
+    position: relative;
+    top: 1vh;
+    gap: 1rem;
+    height: auto;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  .painel-orgselect {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -11vh;
+  }
+
+  .h1-orgselect-1,
+  .h1-orgselect-2 {
+    font-size: 3vh;
+  }
+
+  .h1-orgselect-1 {
+    margin-top: 1vw;
+  }
+
+  .orgselect-botao {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .orgselect-botao {
+    width: 80%;
+    text-align: center;
+  }
+}

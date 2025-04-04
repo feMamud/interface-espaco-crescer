@@ -1,0 +1,135 @@
+/* Fundo escuro para sobrepor a tela */
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem; /* Evita cortes em telas pequenas */
+  }
+  
+  /* Modal de login */
+  .login-modal {
+    background: #e9d7c6;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px; /* Tamanho máximo para desktop */
+    text-align: center;
+  }
+  
+  /* Título */
+  .login-title {
+    color: black;
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsivo */
+  }
+  
+  /* Formulário */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Labels */
+  .login-label {
+    color: black;
+    text-align: left;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  }
+  
+  /* Inputs */
+  .login-input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsivo */
+  }
+  
+  /* Botões */
+  .login-button {
+    padding: 0.8rem;
+    margin-top: 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    background-color: #28a745;
+    color: white;
+    transition: background 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Botão de fechar */
+  .close-btn {
+    background-color: red;
+    margin-top: 0.5rem;
+  }
+  
+  .close-btn:hover {
+    background-color: darkred;
+  }
+  
+  /* 📌 RESPONSIVIDADE PARA TODOS OS TIPOS DE TELAS */
+  
+  /* 🖥️ Telas maiores que 1600px (Monitores grandes) */
+  @media (min-width: 1600px) {
+    .login-modal {
+      max-width: 450px;
+      padding: 2.5rem;
+    }
+  }
+  
+  /* 📱 Celulares pequenos (até 480px) */
+  @media (max-width: 480px) {
+    .login-modal {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  
+    .login-title {
+      font-size: 1.5rem;
+    }
+  
+    .login-input,
+    .login-button {
+      font-size: 1rem;
+      padding: 0.7rem;
+    }
+  }
+  
+  /* 📱📏 Tablets (481px a 1024px) */
+  @media (min-width: 481px) and (max-width: 1024px) {
+    .login-modal {
+      width: 80%;
+      max-width: 350px;
+    }
+  }
+  
+  /* 📺 Telas muito grandes (acima de 2560px - 4K) */
+  @media (min-width: 2560px) {
+    .login-modal {
+      max-width: 600px;
+      padding: 3rem;
+    }
+  
+    .login-title {
+      font-size: 2.5rem;
+    }
+  
+    .login-input,
+    .login-button {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+  

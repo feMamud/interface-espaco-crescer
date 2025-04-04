@@ -3,21 +3,26 @@ import logo from "../../assets/logo.png";
 import "./Navegacao.css";
 import "./NavegacaoTablet.css";
 import "./NavegacaoCelular.css";
+import Login from "../Login/Login";
+import { logout } from "../../api/auth"; // Importa a função de logout
 
 function Navegacao() {
-  const [scrolled, setScrolled] = useState(false); // Estado para monitorar a rolagem
-  const [isOpen, setIsOpen] = useState(false); // Estado para controlar o menu de hambúrguer
+  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 50) {
-      setScrolled(true); // Define scrolled como true se a rolagem for maior que 50 pixels
-    } else {
-      setScrolled(false); // Define scrolled como false caso contrário
-    }
+    setScrolled(offset > 50);
   };
 
-  // Adiciona um event listener para monitorar a rolagem da página
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -25,12 +30,10 @@ function Navegacao() {
     };
   }, []);
 
-  // Função para alternar o menu de hambúrguer
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Define classes para o navbar com base no estado scrolled
   let navbarClasses = ["navbar"];
   if (scrolled) {
     navbarClasses.push("scrolled");
@@ -40,12 +43,10 @@ function Navegacao() {
     <nav className={navbarClasses.join(" ")}>
       <div className="container">
         <div className="logo">
-          <img src={logo} alt="Logo" /> {/* Imagem do logotipo */}
+          <img src={logo} alt="Logo" />
         </div>
         <div
-          className={`hamburger ${isOpen ? "open" : ""} ${
-            scrolled ? "scrolled" : ""
-          }`}
+          className={`hamburger ${isOpen ? "open" : ""} ${scrolled ? "scrolled" : ""}`}
           onClick={toggleMenu}
         >
           <div className={`bar ${scrolled ? "scrolled" : ""}`}></div>
@@ -53,12 +54,7 @@ function Navegacao() {
           <div className={`bar ${scrolled ? "scrolled" : ""}`}></div>
         </div>
 
-        <ul
-          className={`nav-links ${isOpen ? "open" : ""} ${
-            scrolled ? "scrolled" : ""
-          }`}
-        >
-          {/* Links de navegação */}
+        <ul className={`nav-links ${isOpen ? "open" : ""} ${scrolled ? "scrolled" : ""}`}>
           <li>
             <a href="./">Início</a>
           </li>
@@ -74,13 +70,28 @@ function Navegacao() {
           <li>
             <a href="./contato">Contato</a>
           </li>
-          {/*
-          <li><a href="./eventos">Eventos</a></li>
-          */}
+          {!isLoggedIn ? (
+            <li>
+              <a href="#" onClick={() => setIsLoginOpen(true)}>Login</a>
+            </li>
+          ) : (
+            <>
+              <li>
+                <a href="./organizacao">Organização</a>
+              </li>
+              <li>
+                <a href="#" onClick={() => {
+                  logout();
+                  setIsLoggedIn(false);
+                }}>Logout</a>
+              </li>
+            </>
+          )}
         </ul>
       </div>
+      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </nav>
   );
 }
 
-export default Navegacao; // Exporta o componente Navegacao
+export default Navegacao;
