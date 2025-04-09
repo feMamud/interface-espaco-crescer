@@ -90,7 +90,7 @@
     top: 1vh;
     gap: 1rem;
     height: auto;
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 1rem;
   }
 
@@ -100,6 +100,7 @@
     align-items: center;
     position: relative;
     top: -11vh;
+    display: none;
   }
 
   .h1-orgselect-1,
@@ -122,4 +123,33 @@
     width: 80%;
     text-align: center;
   }
+}
+
+@media (min-width: 1400px){
+  .orgselect-mae {
+    position: relative;
+    top: -10vh;
+    gap: 1rem;
+    height: auto;
+    min-height: 80vh;
+    padding: 1rem;
+  }
+
+  /* Botões */
+.orgselect-botao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  font-size: clamp(2rem, 4vw, 2.3rem);
+  gap: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 100%;
+  text-align: center;
+}
 }

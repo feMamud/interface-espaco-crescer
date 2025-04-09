@@ -1,5 +1,5 @@
 /* Container principal */
-.mae-client-list-container {
+.mae-patient-list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 
 /* Container da lista */
-.client-list-container {
+.patient-list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +24,15 @@
 }
 
 /* Título */
-.client-list-title {
+.patient-list-title {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: black; /* Cor corrigida */
   font-weight: bold;
 }
 
-/* Botão Cadastrar Cliente */
-.client-button-add {
+/* Botão Cadastrar patiente */
+.patient-button-add {
   background-color: #007bff;
   color: white;
   padding: 0.8rem 1.5rem;
@@ -44,12 +44,12 @@
   margin-bottom: 1rem;
 }
 
-.client-button-add:hover {
+.patient-button-add:hover {
   background-color: #0056b3;
 }
 
 /* Estilização da Tabela */
-.table-client-list {
+.table-patient-list {
   width: 100%;
   border-collapse: collapse;
   background-color: #f8f9fa;
@@ -59,7 +59,7 @@
 }
 
 /* Cabeçalhos da tabela */
-.client-th {
+.patient-th {
   background-color: #343a40;
   color: white;
   font-weight: bold;
@@ -69,31 +69,43 @@
 }
 
 /* Células da tabela */
-.client-td {
+.patient-td {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid #ddd;
   color: black; /* Garante que o texto fique preto */
 }
 
-.client-row:nth-child(even) {
+.patient-row:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.client-row:hover {
+.patient-row:hover {
   background-color: #e9ecef;
 }
 
+.patient-th {
+  text-align: center;
+}
+
 /* Botões de ação */
-.client-actions {
+.patient-td-view {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  align-items: center;
+}
+
+/* Botões de ação */
+.patient-actions {
   display: flex;
   justify-content: center; /* Centraliza os botões */
   align-items: center;
   gap: 0.5rem; /* Espaço entre os botões */
 }
 
-.client-button-edit,
-.client-button-delete {
+.patient-button-view,
+.patient-button-edit,
+.patient-button-delete {
   padding: 0.5rem 1rem;
   margin-top: 2vh;
   font-size: 0.9rem;
@@ -103,124 +115,210 @@
   transition: background 0.3s ease;
 }
 
-.client-button-edit {
+.patient-button-view {
+  background-color: #407fdd;
+  color: white;
+}
+
+.patient-button-view:hover {
+  background-color: #20467e;
+}
+
+.patient-button-edit {
   background-color: #28a745;
   color: white;
 }
 
-.client-button-edit:hover {
+.patient-button-edit:hover {
   background-color: #1e7e34;
 }
 
-.client-button-delete {
+.patient-button-delete {
   background-color: #dc3545;
   color: white;
 }
 
-.client-button-delete:hover {
+.patient-button-delete:hover {
   background-color: #a71d2a;
 }
 
 /* Textos de carregamento e aviso */
 .loading-text,
-.no-clients-text {
+.no-patients-text {
   font-size: 1.2rem;
   text-align: center;
   color: black; /* Deixa o texto preto */
   font-weight: bold;
 }
 
-.client-modal {
+/* Modal de Cadastro e Atualização */
+.patient-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999; /* Garante que fique acima de tudo */
 }
 
-.client-modal-content {
-  background-color: white;
-  max-height: 90vh; /* limite máximo de altura */
-  width: 90%;
-  max-width: 800px; /* ou o tamanho máximo que desejar */
-  overflow-y: auto; /* rolagem vertical */
-  padding: 20px;
+.patient-modal-content {
+  background: #fff;
+  padding: 2rem;
   border-radius: 8px;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
-/* Botão de fechar */
-.client-modal-close {
+/* Botão de fechar modal */
+.patient-modal-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: #333;
+}
+
+/* Versão desktop */
+.patient-table-desktop {
+  display: block;
+}
+
+.patient-carousel-mobile {
+  display: none;
+}
+
+.pagination-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 
 /* Responsividade */
 @media (max-width: 768px) {
   /* Container da lista */
-  .client-list-container {
+  .mae-patient-list-container {
+    height: 80vh;
+  }
+
+  .patient-list-container {
+    position: relative;
+    top: -10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 12vh;
     margin-right: 7vh;
     width: 80%;
     background: #e9d7c6;
   }
 
-  .client-modal-content {
+  .patient-modal-content {
     width: 95%;
     padding: 1.5rem;
   }
 
-  .table-client-list th,
-  .table-client-list td {
+  .table-patient-list th,
+  .table-patient-list td {
     padding: 0.6rem;
     font-size: 0.9rem;
+  }
+
+  .patient-table-desktop {
+    display: none;
+  }
+
+  .patient-carousel-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .patient-card {
+    background: #fff;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .patient-card p {
+    margin: 0.3rem 0;
+    color: #333;
+  }
+
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .carousel-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .carousel-controls span {
+    font-weight: bold;
   }
 }
 
 @media (max-width: 480px) {
+  /* Container da lista */
+  .patient-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+    margin-right: 7vh;
+    width: 80%;
+    background: #e9d7c6;
+  }
 
-  .table-client-list,
-  .table-client-list thead,
-  .table-client-list tbody,
-  .table-client-list th,
-  .table-client-list td,
-  .table-client-list tr {
+  .table-patient-list,
+  .table-patient-list thead,
+  .table-patient-list tbody,
+  .table-patient-list th,
+  .table-patient-list td,
+  .table-patient-list tr {
     display: block;
   }
 
-  .table-client-list thead {
+  .table-patient-list thead {
     display: none;
   }
 
-  .table-client-list tr {
+  .table-patient-list tr {
     margin-bottom: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
   }
 
-  .table-client-list td {
+  .table-patient-list td {
     display: flex;
     justify-content: space-between;
     padding: 0.8rem;
     color: black !important; /* Garante que os textos fiquem pretos */
   }
 
-  .table-client-list td::before {
+  .table-patient-list td::before {
     content: attr(data-label);
     font-weight: bold;
   }
@@ -228,12 +326,12 @@
 
 @media (max-width: 400px) {
   /* Container da lista */
-  .client-list-container {
+  .patient-list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80vw;
-    margin-right: 10vh;
+    margin-top: 30vw;
+    margin-right: 9vh;
     width: 80%;
     background: #e9d7c6;
   }
@@ -241,28 +339,28 @@
 
 @media (min-width: 1400px) {
   /* Container da lista */
-  .client-list-container {
+  .patient-list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1vh;
     border-radius: 2rem;
-    width: 80%;
+    width: 85%;
     background: #e9d7c6;
     padding: 2rem;
     box-shadow: 0 0.25rem 3rem rgba(0, 0, 0, 0.1);
   }
 
   /* Título */
-  .client-list-title {
+  .patient-list-title {
     font-size: 4rem;
     margin-bottom: 2rem;
     color: black; /* Cor corrigida */
     font-weight: bold;
   }
 
-  /* Botão Cadastrar Cliente */
-  .client-button-add {
+  /* Botão Cadastrar patiente */
+  .patient-button-add {
     padding: 1.6rem 2.5rem;
     font-size: 2rem;
     border-radius: 1rem;
@@ -270,7 +368,7 @@
   }
 
   /* Estilização da Tabela */
-  .table-client-list {
+  .table-patient-list {
     width: 100%;
     border-collapse: collapse;
     background-color: #f8f9fa;
@@ -279,28 +377,29 @@
   }
 
   /* Cabeçalhos da tabela */
-  .client-th {
+  .patient-th {
     padding: 2rem;
     font-size: 2rem;
   }
 
   /* Células da tabela */
-  .client-td {
+  .patient-td {
     font-size: 2rem;
     padding: 2rem;
     border-bottom: 1px solid #ddd;
   }
 
   /* Botões de ação */
-  .client-actions {
+  .patient-actions {
     gap: 1rem; /* Espaço entre os botões */
   }
 
-  .client-button-edit,
-  .client-button-delete {
+  .patient-button-view,
+  .patient-button-edit,
+  .patient-button-delete {
     position: relative;
     top: 1vh;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     margin-right: 1rem;
     margin-left: 1rem;
     font-size: 2rem;
@@ -309,12 +408,12 @@
 
   /* Textos de carregamento e aviso */
   .loading-text,
-  .no-clients-text {
+  .no-patients-text {
     font-size: 2.2rem;
   }
 
   /* Modal de Cadastro e Atualização */
-  .client-modal {
+  .patient-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -327,7 +426,7 @@
     z-index: 9999; /* Garante que fique acima de tudo */
   }
 
-  .client-modal-content {
+  .patient-modal-content {
     background: #fff;
     padding: 2rem;
     border-radius: 8px;
@@ -337,7 +436,7 @@
   }
 
   /* Botão de fechar modal */
-  .client-modal-close {
+  .patient-modal-close {
     position: absolute;
     top: 1.8vh;
     right: 1rem;

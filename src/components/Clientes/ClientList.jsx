@@ -51,11 +51,12 @@ const ClientList = () => {
           <thead>
             <tr>
               <th className="client-th">Nome</th>
-              <th className="client-th">Data de Nascimento</th>
-              <th className="client-th">Responsável</th>
-              <th className="client-th">Celular</th>
+              <th className="client-th">Nascimento</th>
+              <th className="client-th">Realizado com</th>
+              <th className="client-th">Mãe</th>
+              <th className="client-th">Pai</th>
+              <th className="client-th">Telefone</th>
               <th className="client-th">Endereço</th>
-              <th className="client-th">Horário</th>
               <th className="client-th">Ações</th>
             </tr>
           </thead>
@@ -64,10 +65,11 @@ const ClientList = () => {
               <tr key={client.id} className="client-row">
                 <td className="client-td">{client.name}</td>
                 <td className="client-td">{client.birthDate}</td>
-                <td className="client-td">{client.guardianName}</td>
+                <td className="client-td">{client.realizadoCom}</td>
+                <td className="client-td">{client.mae}</td>
+                <td className="client-td">{client.pai}</td>
                 <td className="client-td">{client.phone}</td>
                 <td className="client-td">{client.address}</td>
-                <td className="client-td">{client.appointmentTime}</td>
                 <td className="client-actions">
                   <button
                     className="client-button-edit"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { login } from "../../api/auth"; // Importando a função de login
+import { login } from "../../api/auth";
 
 function Login({ isOpen, onClose, setIsLoggedIn }) {
   const [email, setEmail] = useState("");
@@ -10,15 +10,14 @@ function Login({ isOpen, onClose, setIsLoggedIn }) {
   if (!isOpen) return null;
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Evita o recarregamento da página
-  
+    event.preventDefault();
+
     try {
-      const token = await login(email, password); // Chama a API
-  
-      if (token) {
-        localStorage.setItem("token", token); // Salva o token
-        setErrorMessage(""); // Limpa mensagens de erro
-        window.location.reload(); // Atualiza a página para refletir a mudança de estado
+      const success = await login(email, password);
+      if (success) {
+        setErrorMessage("");
+        setIsLoggedIn(true); // ✅ atualiza estado
+        onClose(); // fecha modal
       } else {
         setErrorMessage("Email ou senha inválidos.");
       }
@@ -26,7 +25,7 @@ function Login({ isOpen, onClose, setIsLoggedIn }) {
       console.error("Erro no login:", error);
       setErrorMessage("Erro ao tentar fazer login. Tente novamente.");
     }
-  };  
+  };
 
   return (
     <div className="login-container">

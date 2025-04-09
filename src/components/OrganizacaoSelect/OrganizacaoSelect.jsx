@@ -18,15 +18,21 @@ function OrganizacaoSelect() {
       <div className="orgselect-botao">
         <button
           className="orgselect-botao cliente"
-          onClick={() => navigate("./clientes")}
+          onClick={() => navigate("/clientes")}
         >
-          Clientes
+          Pedagogia
         </button>
         <button
           className="orgselect-botao paciente"
-          onClick={() => navigate("./pacientes")}
+          onClick={() => navigate("/pacientes")}
         >
-          Pacientes
+          Psicanálise
+        </button>
+        <button
+          className="orgselect-botao cliente"
+          onClick={() => navigate("/consultas")}
+        >
+          Consultas
         </button>
       </div>
     </div>

@@ -4,18 +4,21 @@ import "./Navegacao.css";
 import "./NavegacaoTablet.css";
 import "./NavegacaoCelular.css";
 import Login from "../Login/Login";
-import { logout } from "../../api/auth"; // Importa a função de logout
+import { getProfile, logout } from "../../api/auth";
 
 function Navegacao() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsLoggedIn(!!token);
+    async function checkLogin() {
+      const profile = await getProfile();
+      setIsLoggedIn(!!profile);
+    }
+
+    checkLogin();
   }, []);
 
   const handleScroll = () => {
@@ -32,6 +35,14 @@ function Navegacao() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLogout = async () => {
+    const success = await logout();
+    if (success) {
+      setIsLoggedIn(false);
+      window.location.reload();
+    }
   };
 
   let navbarClasses = ["navbar"];
@@ -55,41 +66,24 @@ function Navegacao() {
         </div>
 
         <ul className={`nav-links ${isOpen ? "open" : ""} ${scrolled ? "scrolled" : ""}`}>
-          <li>
-            <a href="./">Início</a>
-          </li>
-          <li>
-            <a href="./espaco">O Espaço</a>
-          </li>
-          <li>
-            <a href="./psicopedagogia">Psicopedagogia</a>
-          </li>
-          <li>
-            <a href="./psicanalise"> Psicanálise</a>
-          </li>
-          <li>
-            <a href="./contato">Contato</a>
-          </li>
+          <li><a href="./">Início</a></li>
+          <li><a href="./espaco">O Espaço</a></li>
+          <li><a href="./psicopedagogia">Psicopedagogia</a></li>
+          <li><a href="./psicanalise">Psicanálise</a></li>
+          <li><a href="./contato">Contato</a></li>
+
           {!isLoggedIn ? (
-            <li>
-              <a href="#" onClick={() => setIsLoginOpen(true)}>Login</a>
-            </li>
+            <li><a href="#" onClick={() => setIsLoginOpen(true)}>Login</a></li>
           ) : (
             <>
-              <li>
-                <a href="./organizacao">Organização</a>
-              </li>
-              <li>
-                <a href="#" onClick={() => {
-                  logout();
-                  setIsLoggedIn(false);
-                }}>Logout</a>
-              </li>
+              <li><a href="./organizacao">Organização</a></li>
+              <li><a href="#" onClick={handleLogout}>Logout</a></li>
             </>
           )}
         </ul>
       </div>
-      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+
+      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} setIsLoggedIn={setIsLoggedIn} />
     </nav>
   );
 }

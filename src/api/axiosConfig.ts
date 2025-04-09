@@ -1,23 +1,30 @@
+// axiosConfig.ts
 import axios from 'axios';
 
-// Criando uma instância do Axios
 const api = axios.create({
-  baseURL: 'http://localhost:3000', // Altere para a URL da sua API
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: true, // ✅ necessário para enviar cookies automaticamente
 });
 
-// Interceptor para adicionar o token automaticamente em todas as requisições
-api.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
+// Interceptor de resposta para erros
+api.interceptors.response.use(
+  (response) => response,
   (error) => {
+    const status = error.response?.status;
+    const message = error.response?.data?.message;
+
+    // ❌ NÃO redirecionar automaticamente para /login aqui
+    if (status === 401) {
+      console.warn("Usuário não autenticado:", message);
+    }
+
+    if (status === 400 && message) {
+      alert(message);
+    }
+
     return Promise.reject(error);
   }
 );

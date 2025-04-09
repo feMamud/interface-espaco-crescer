@@ -4,8 +4,8 @@ import conhecimento from "../../../assets/conhecimento.png";
 import experiencia from "../../../assets/experiencia.jpg";
 import useTextoPsicaAnimations from "./TextoPsicaAnimations"; // Importe o hook
 import "./TextoPsica.css";
-import './TextoPsicaTablet.css';
-import './TextoPsicaCelular.css';
+import "./TextoPsicaTablet.css";
+import "./TextoPsicaCelular.css";
 
 function TextoPsica() {
   // Chame o hook dentro do componente
@@ -16,9 +16,12 @@ function TextoPsica() {
         <div className="paragrafo-TextoPsica-1">
           <h1 className="h1-TextoPsica-1">O que é a Psicanálise?</h1>
           <p className="p-TextoPsica-1">
-          A psicanálise é uma abordagem terapêutica que explora o inconsciente para entender e tratar conflitos emocionais e 
-                    psíquicos. Fundada por Sigmund Freud, ela utiliza técnicas como a livre associação e a análise dos sonhos para ajudar 
-                    os indivíduos a descobrir e resolver questões profundas, promovendo autoconhecimento e alívio de sintomas.
+            A Psicanálise é uma abordagem terapêutica dedicada à exploração do
+            inconsciente, buscando compreender e tratar conflitos emocionais e
+            psíquicos. Fundada pelo renomado Sigmund Freud, a técnica utiliza
+            ferramentas como a livre associação e a análise dos sonhos para
+            ajudar indivíduos a enfrentarem questões profundas, promovendo
+            autoconhecimento e alívio de sintomas.{" "}
           </p>
         </div>
         <div className="container-TextoPsica-2">
@@ -26,17 +29,29 @@ function TextoPsica() {
             <h1 className="h1-TextoPsica-2">Mateus Gama Rodrigues </h1>
             <h1 className="h1-TextoPsica-3">Psicanalista </h1>
             <p className="p-TextoPsica-1">
-            Mateus Gama Rodrigues é psicanalista filiado à Associação Brasileira de Psicanálise número 10.232 e Terapeuta 
-                    familiar. Dedica-se em ajudar pessoas com traumas, preocupações, medos e dores emocionais por meio da terapia 
-                    psicanalítica. Junto com o cliente percorre caminhos nos quais somos confrontados por questões pessoais, sociais e 
-                    familiares. Palestra com temas de educação, psicanálise, saúde mental, empreendedorismo e experiencia pessoal.
+              Mateus Gama Rodrigues, psicanalista registrado na Associação
+              Brasileira de Psicanálise (ABP) sob o número 10.232, também atua
+              como terapeuta familiar. Sua missão é ajudar pessoas a superarem
+              traumas, medos, preocupações e dores emocionais por meio da
+              prática psicanalítica. Com empatia e comprometimento, ele guia
+              seus clientes em um processo de reflexão e enfrentamento de
+              desafios pessoais, sociais e familiares. Além de sua prática
+              clínica, Mateus é palestrante em temas variados, como educação,
+              saúde mental, psicanálise, empreendedorismo e experiências de
+              vida. Suas palestras são inspiradoras e voltadas para promover
+              entendimento e transformação.
             </p>
+            <h1 className="h1-TextoPsica-2">A Psicanálise na prática: um caminho de crescimento pessoal
+            </h1>
             <p className="p-TextoPsica-1">
-            A psicanálise é uma abordagem que trabalha com o inconsciente e os padrões de comportamento e emoções reprimidas. 
-                    Com a escuta terapêutica e a interpretação do simbolismo dos sonhos e da fala do cliente, a equipe do Crescer busca 
-                    auxiliar o cliente a se compreender e lidar com suas emoções e traumas, possibilitando o seu crescimento pessoal.
+              A Psicanálise se destaca por sua habilidade em trabalhar com o
+              inconsciente, desvendando padrões de comportamento e emoções
+              reprimidas. No Crescer, por meio da escuta terapêutica e da
+              interpretação simbólica de sonhos e falas, ajudamos nossos
+              clientes a se compreenderem de forma mais profunda. O objetivo é
+              possibilitar que cada pessoa lide com suas emoções e traumas,
+              abrindo caminho para o desenvolvimento e o crescimento pessoal.{" "}
             </p>
-            
           </div>
           <div className="galeria-TextoPsica">
             <img

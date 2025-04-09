@@ -1,60 +1,74 @@
 import { useState } from "react";
-import { registerClient } from "../../../services/client";
+import { registerClient } from "../../../services/client"; // atualizado
 import { formatDateToISO, formatPhoneNumber } from "../../../utils/formatUtils";
 import "./ClientForm.css";
 
 const ClientForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
+    realizadoCom: "",
     name: "",
     birthDate: "",
-    guardianName: "",
-    phone: "",
+    naturalidade: "",
+    escola: "",
+    serie: "",
+    cordenadora: "",
+    professora: "",
+    mae: "",
+    idade_mae: "",
+    formacao_mae: "",
+    profissao_mae: "",
+    pai: "",
+    idade_pai: "",
+    formacao_pai: "",
+    profissao_pai: "",
+    pais_juntos: "",
+    RG_responsavel: "",
+    CPF_responsavel: "",
     address: "",
-    appointmentTime: "",
+    phone: "",
+    celular: "",
+    reforco_escolar: "",
+    atividades_extras: "",
+    outros_acompanhamentos: "",
+    quem_indicou: "",
+    queixa: "",
+    valor_sessao: "",
+    forma_pagamento: "",
+    irmaos: [],
   });
+
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     let formattedValue = value;
 
-    if (name === "phone") {
+    if (["phone", "celular"].includes(name)) {
       formattedValue = formatPhoneNumber(value);
-
-      // Impede que o usuário digite mais de 15 caracteres formatados ((XX) XXXXX-XXXX)
-      if (formattedValue.length > 15) {
-        return;
-      }
-    }
-
-    if (name === "birthDate") {
-      // Garante que o ano tenha no máximo 4 dígitos
-      const [year, month, day] = value.split("-");
-      if (year && year.length > 4) {
-        return;
-      }
+      if (formattedValue.length > 15) return;
     }
 
     setFormData({ ...formData, [name]: formattedValue });
   };
 
+  const handleAddIrmao = () => {
+    setFormData({
+      ...formData,
+      irmaos: [
+        ...formData.irmaos,
+        { nome_irmao: "", idade_irmao: "", escola_irmao: "", serie_irmao: "" },
+      ],
+    });
+  };
+
+  const handleIrmaoChange = (index, field, value) => {
+    const updatedIrmaos = [...formData.irmaos];
+    updatedIrmaos[index][field] = value;
+    setFormData({ ...formData, irmaos: updatedIrmaos });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Verifica se o telefone tem 10 ou 11 dígitos antes de enviar
-    const cleanedPhone = formData.phone.replace(/\D/g, "");
-    if (cleanedPhone.length < 10 || cleanedPhone.length > 11) {
-      setMessage("O número de telefone deve ter 10 ou 11 dígitos.");
-      return;
-    }
-
-    // Verifica se o ano da data tem exatamente 4 dígitos
-    const [year] = formData.birthDate.split("-");
-    if (year.length !== 4) {
-      setMessage("O ano da data de nascimento deve ter 4 dígitos.");
-      return;
-    }
 
     try {
       const formattedData = {
@@ -64,16 +78,9 @@ const ClientForm = ({ onClose }) => {
 
       await registerClient(formattedData);
       setMessage("Cliente cadastrado com sucesso!");
-      setFormData({
-        name: "",
-        birthDate: "",
-        guardianName: "",
-        phone: "",
-        address: "",
-        appointmentTime: "",
-      });
       onClose();
     } catch (error) {
+      console.error(error);
       setMessage("Erro ao cadastrar cliente.");
     }
   };
@@ -84,10 +91,15 @@ const ClientForm = ({ onClose }) => {
       <form onSubmit={handleSubmit} className="cadastro-form">
         <input
           className="cadastro-input"
-          type="text"
+          name="realizadoCom"
+          placeholder="Realizado com"
+          onChange={handleChange}
+          required
+        />
+        <input
+          className="cadastro-input"
           name="name"
-          placeholder="Nome do Cliente"
-          value={formData.name}
+          placeholder="Nome"
           onChange={handleChange}
           required
         />
@@ -95,44 +107,219 @@ const ClientForm = ({ onClose }) => {
           className="cadastro-input"
           type="date"
           name="birthDate"
-          value={formData.birthDate}
           onChange={handleChange}
           required
         />
         <input
           className="cadastro-input"
-          type="text"
-          name="guardianName"
-          placeholder="Nome do Responsável"
-          value={formData.guardianName}
+          name="naturalidade"
+          placeholder="Naturalidade"
           onChange={handleChange}
         />
         <input
           className="cadastro-input"
-          type="tel"
-          name="phone"
-          placeholder="Celular (XX) XXXXX-XXXX"
-          value={formData.phone}
+          name="escola"
+          placeholder="Escola"
           onChange={handleChange}
-          required
         />
         <input
           className="cadastro-input"
-          type="text"
+          name="serie"
+          placeholder="Série"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="cordenadora"
+          placeholder="Coordenadora"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="professora"
+          placeholder="Professora"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="mae"
+          placeholder="Nome da mãe"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="idade_mae"
+          placeholder="Idade da mãe"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="formacao_mae"
+          placeholder="Formação da mãe"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="profissao_mae"
+          placeholder="Profissão da mãe"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="pai"
+          placeholder="Nome do pai"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="idade_pai"
+          placeholder="Idade do pai"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="formacao_pai"
+          placeholder="Formação do pai"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="profissao_pai"
+          placeholder="Profissão do pai"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="pais_juntos"
+          placeholder="Pais juntos?"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="RG_responsavel"
+          placeholder="RG do responsável"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="CPF_responsavel"
+          placeholder="CPF do responsável"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
           name="address"
           placeholder="Endereço"
-          value={formData.address}
           onChange={handleChange}
-          required
         />
         <input
           className="cadastro-input"
-          type="time"
-          name="appointmentTime"
-          value={formData.appointmentTime}
+          name="phone"
+          placeholder="Telefone fixo"
           onChange={handleChange}
-          required
         />
+        <input
+          className="cadastro-input"
+          name="celular"
+          placeholder="Celular"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="reforco_escolar"
+          placeholder="Reforço escolar"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="atividades_extras"
+          placeholder="Atividades extras"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="outros_acompanhamentos"
+          placeholder="Outros acompanhamentos"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="quem_indicou"
+          placeholder="Quem indicou?"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="queixa"
+          placeholder="Queixa"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="valor_sessao"
+          placeholder="Valor da sessão"
+          onChange={handleChange}
+        />
+        <input
+          className="cadastro-input"
+          name="forma_pagamento"
+          placeholder="Forma de pagamento"
+          onChange={handleChange}
+        />
+
+        <h3>Irmãos</h3>
+        {formData.irmaos.map((irmao, index) => (
+          <div key={index} className="irmao-group">
+            <input
+              className="cadastro-input"
+              placeholder="Nome do irmão"
+              value={irmao.nome_irmao}
+              onChange={(e) =>
+                handleIrmaoChange(index, "nome_irmao", e.target.value)
+              }
+            />
+            <input
+              className="cadastro-input"
+              placeholder="Idade do irmão"
+              value={irmao.idade_irmao}
+              onChange={(e) =>
+                handleIrmaoChange(index, "idade_irmao", e.target.value)
+              }
+            />
+            <input
+              className="cadastro-input"
+              placeholder="Escola do irmão"
+              value={irmao.escola_irmao}
+              onChange={(e) =>
+                handleIrmaoChange(index, "escola_irmao", e.target.value)
+              }
+            />
+            <input
+              className="cadastro-input"
+              placeholder="Série do irmão"
+              value={irmao.serie_irmao}
+              onChange={(e) =>
+                handleIrmaoChange(index, "serie_irmao", e.target.value)
+              }
+            />
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={handleAddIrmao}
+          className="cadastro-button"
+        >
+          Adicionar Irmão
+        </button>
+
+        <button
+          type="button"
+          className="cadastro-button voltar-button"
+          onClick={onClose}
+        >
+          Voltar
+        </button>
+
         <button type="submit" className="cadastro-button">
           Cadastrar
         </button>

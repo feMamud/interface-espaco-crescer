@@ -1,0 +1,101 @@
+/* Container principal do formulário */
+.appointment-form {
+  max-width: 40vw;
+  width: 90%;
+  margin: 5vh auto;
+  padding: 2vw;
+  background: #e9d7c6;
+  border-radius: 1rem;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título */
+.appointment-form-title {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1.5vh;
+}
+
+/* Grupo de inputs */
+.appointment-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.appointment-form-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+/* Inputs e selects */
+.appointment-form-input,
+.appointment-form-select {
+  width: 100%;
+  padding: 1.5vh;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.appointment-form-select,
+.appointment-form-select  {
+  color: white;
+}
+
+
+
+
+.appointment-form-input:focus,
+.appointment-form-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Área dos botões */
+.appointment-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Botão de submit */
+.appointment-form-submit {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.appointment-form-submit:hover {
+  background-color: #218838;
+}
+
+/* Botão de cancelar */
+.appointment-form-cancel {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.appointment-form-cancel:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,366 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+.mae-appointment-list {
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #fdfaf6, #b89f89);
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.appointment-list-container {
+  margin-top: 5vh;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+.appointment-list-container h2 {
+  font-size: 2rem;
+  color: #2c2c2c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ===== BOTÃO DE NOVA CONSULTA ===== */
+.appointment-list-container > button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+}
+
+.appointment-list-container > button:hover {
+  background-color: #0056b3;
+}
+
+/* ===== TÍTULOS DAS TABELAS ===== */
+.appointment-list-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #3c3c3c;
+}
+
+/* ===== TABELA ===== */
+.appointment-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.appointment-list-table th,
+.appointment-list-table td {
+  border: 1px solid #e0dcd7;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: #000;
+}
+
+.appointment-list-table th {
+  background-color: #f1ece6;
+  font-weight: 600;
+  color: #3d3d3d;
+}
+
+.appointment-list-table tr:nth-child(even) {
+  background-color: #f9f6f3;
+}
+
+/* ===== BOTÕES DE AÇÃO ===== */
+.appointment-list-delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appointment-list-delete-btn:hover {
+  background-color: #c82333;
+}
+
+.appointment-list-delete-btn:last-child {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.appointment-list-delete-btn:last-child:hover {
+  background-color: #e0a800;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botão fechar do modal */
+.modal-content > button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.modal-content > button:hover {
+  color: #000;
+}
+
+/* Estilo para container horizontal com scroll */
+.appointment-card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.appointment-card {
+  min-width: 250px;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-card p {
+  margin: 0.5rem 0;
+  color: #000;
+}
+
+.appointment-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.appointment-card-buttons button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.appointment-card-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown para filtro */
+.appointment-client-select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Estilo para botões de ações nas consultas */
+.appointment-card-buttons button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-card-buttons button:hover {
+  background-color: #45a049;
+}
+
+/* Controles do carrossel */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.carousel-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: #0056b3;
+}
+
+.carousel-controls span {
+  font-weight: bold;
+}
+
+/* Paginação para desktop */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  gap: 12px;
+}
+
+.pagination-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-controls span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .mae-appointment-list {
+    position: relative;
+    top: -10vh;
+  }
+
+  .appointment-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-top: 10vh;
+    margin-right: 1vh;
+    padding: 1.5rem;
+    background: #e9d7c6;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .appointment-list-table th,
+  .appointment-list-table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .appointment-list-container > button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-list-table,
+  .appointment-list-table thead,
+  .appointment-list-table tbody,
+  .appointment-list-table th,
+  .appointment-list-table td,
+  .appointment-list-table tr {
+    display: block;
+  }
+
+  .appointment-list-table thead {
+    display: none;
+  }
+
+  .appointment-list-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .appointment-list-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    color: black !important;
+  }
+
+  .appointment-list-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #444;
+  }
+
+  .appointment-list-delete-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .appointment-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vw;
+    margin-right: 2vh;
+    width: 80%;
+    padding: 1rem;
+    background: #e9d7c6;
+  }
+}

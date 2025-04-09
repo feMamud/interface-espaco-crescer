@@ -70,18 +70,6 @@
   box-sizing: border-box; /* garante que padding não estoure a largura */
 }
 
-.voltar-button {
-  background-color: #ccc;
-  color: #333;
-  margin-right: 10px;
-  transition: background-color 0.2s ease;
-}
-
-.voltar-button:hover {
-  background-color: #bbb;
-}
-
-
 /* Responsividade */
 @media (max-width: 1024px) {
   .cadastro-container {
@@ -183,4 +171,31 @@
     font-size: 2.4rem;
     border-radius: 1rem;
   }
+}
+
+/* Estilo para grupo de irmãos */
+.irmao-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  background: #f4ede4;
+  padding: 1vh 1vw;
+  border-radius: 0.5rem;
+  margin-bottom: 2vh;
+  border: 1px solid #ccc;
+}
+
+.irmao-group input {
+  font-size: 1.1rem;
+  padding: 1.2vh;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.irmao-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0.5vw rgba(0, 123, 255, 0.5);
 }

@@ -6,20 +6,28 @@ import Psicanalise from "./pages/Psicanalise/Psicanalise";
 import Contato from "./pages/Contato/Contato";
 import Organizacao from "./pages/Organizacao/Organizacao";
 import Cliente from "./pages/Cliente/Cliente";
+import Paciente from './pages/Paciente/Paciente';
+import Appointment from './pages/Appointment/Appointmente';
 import PrivateRoute from "./components/PrivateRoutes/PrivateRoutes";
+import Login from './components/Login/Login';
 import { useState, useEffect } from "react";
+import { getProfile } from "./api/auth"; // 👈 importar
 
 function AppRoutes() {
-  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("token"));
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkAuth = () => {
-      setIsAuthenticated(!!localStorage.getItem("token"));
-    };
+    async function checkAuth() {
+      const profile = await getProfile();
+      setIsAuthenticated(!!profile);
+      setLoading(false);
+    }
 
-    window.addEventListener("storage", checkAuth); // Detecta logout de outras abas
-    return () => window.removeEventListener("storage", checkAuth);
+    checkAuth();
   }, []);
+
+  if (loading) return null; // ou algum <Loading />
 
   return (
     <Roteador>
@@ -29,11 +37,13 @@ function AppRoutes() {
         <Route path="/psicopedagogia" Component={Psicopedagogia} />
         <Route path="/psicanalise" Component={Psicanalise} />
         <Route path="/contato" Component={Contato} />
+        <Route path="/login" Component={Login} />
 
-        {/* Rotas protegidas */}
         <Route element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
           <Route path="/organizacao" Component={Organizacao} />
-          <Route path="/organizacao/clientes" Component={Cliente} />
+          <Route path="/clientes" Component={Cliente} />
+          <Route path="/pacientes" Component={Paciente} />
+          <Route path="/consultas" Component={Appointment} />
         </Route>
       </Routes>
     </Roteador>

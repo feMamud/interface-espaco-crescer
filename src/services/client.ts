@@ -1,47 +1,103 @@
-import axios from 'axios';
+import api from '../api/axiosConfig';
 
 const API_URL = 'http://localhost:3000/clients';
 
-// 🔹 Criar um cliente
 export const registerClient = async (clientData: {
+  realizadoCom: string;
   name: string;
   birthDate: string;
-  guardianName: string;
-  phone: string;
+  naturalidade: string;
+  escola: string;
+  serie: string;
+  cordenadora: string;
+  professora: string;
+  mae: string;
+  idade_mae: string;
+  formacao_mae: string;
+  profissao_mae: string;
+  pai: string;
+  idade_pai: string;
+  formacao_pai: string;
+  profissao_pai: string;
+  pais_juntos: string;
+  RG_responsavel: string;
+  CPF_responsavel: string;
   address: string;
-  appointmentTime: string;
+  phone: string;
+  celular: string;
+  reforco_escolar: string;
+  atividades_extras: string;
+  outros_acompanhamentos: string;
+  quem_indicou: string;
+  queixa: string;
+  valor_sessao: string;
+  forma_pagamento: string;
+  irmaos?: {
+    nome_irmao: string;
+    idade_irmao: string;
+    escola_irmao: string;
+    serie_irmao: string;
+  }[];
 }) => {
-  const response = await axios.post(`${API_URL}`, clientData);
+  const response = await api.post(`${API_URL}`, clientData);
   return response.data;
 };
 
-// 🔹 Listar todos os clientes
 export const getClients = async () => {
-  const response = await axios.get(`${API_URL}`);
+  const response = await api.get(`${API_URL}`);
   return response.data;
 };
 
-// 🔹 Buscar um cliente específico por ID
 export const getClientById = async (id: number) => {
-  const response = await axios.get(`${API_URL}/${id}`);
+  const response = await api.get(`${API_URL}/${id}`);
   return response.data;
 };
 
-// 🔹 Atualizar um cliente
-export const updateClient = async (id: number, clientData: {
-  name?: string;
-  birthDate?: string;
-  guardianName?: string;
-  phone?: string;
-  address?: string;
-  appointmentTime?: string;
-}) => {
-  const response = await axios.put(`${API_URL}/${id}`, clientData);
+export const updateClient = async (
+  id: number,
+  clientData: Partial<{
+    realizadoCom: string;
+    name: string;
+    birthDate: string;
+    naturalidade: string;
+    escola: string;
+    serie: string;
+    cordenadora: string;
+    professora: string;
+    mae: string;
+    idade_mae: string;
+    formacao_mae: string;
+    profissao_mae: string;
+    pai: string;
+    idade_pai: string;
+    formacao_pai: string;
+    profissao_pai: string;
+    pais_juntos: string;
+    RG_responsavel: string;
+    CPF_responsavel: string;
+    address: string;
+    phone: string;
+    celular: string;
+    reforco_escolar: string;
+    atividades_extras: string;
+    outros_acompanhamentos: string;
+    quem_indicou: string;
+    queixa: string;
+    valor_sessao: string;
+    forma_pagamento: string;
+    irmaos?: {
+      nome_irmao: string;
+      idade_irmao: string;
+      escola_irmao: string;
+      serie_irmao: string;
+    }[];
+  }>
+) => {
+  const response = await api.put(`${API_URL}/${id}`, clientData);
   return response.data;
 };
 
-// 🔹 Deletar um cliente
 export const deleteClient = async (id: number) => {
-  const response = await axios.delete(`${API_URL}/${id}`);
+  const response = await api.delete(`${API_URL}/${id}`);
   return response.data;
 };
