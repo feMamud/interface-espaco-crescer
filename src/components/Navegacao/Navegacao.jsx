@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // ✅ IMPORTAÇÃO NECESSÁRIA
+import { Link, useNavigate } from "react-router-dom"; // ✅ IMPORTAÇÃO NECESSÁRIA
 import logo from "../../assets/logo.png";
 import "./Navegacao.css";
 import "./NavegacaoTablet.css";
@@ -12,7 +12,9 @@ function Navegacao() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate(); // Hook do react-router para navegação programática
 
+  // Verifica o estado de login ao carregar a página
   useEffect(() => {
     async function checkLogin() {
       const profile = await getProfile();
@@ -22,11 +24,13 @@ function Navegacao() {
     checkLogin();
   }, []);
 
+  // Função que lida com o scroll
   const handleScroll = () => {
     const offset = window.scrollY;
     setScrolled(offset > 50);
   };
 
+  // Configura o evento de scroll para adicionar ou remover a classe 'scrolled'
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -34,15 +38,18 @@ function Navegacao() {
     };
   }, []);
 
+  // Alterna o menu hamburguer
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Função de logout
   const handleLogout = async () => {
     const success = await logout();
     if (success) {
       setIsLoggedIn(false);
-      window.location.reload();
+      // Redireciona para a página inicial após logout
+      navigate("/");
     }
   };
 
@@ -87,7 +94,7 @@ function Navegacao() {
       <Login
         isOpen={isLoginOpen}
         onClose={() => setIsLoginOpen(false)}
-        setIsLoggedIn={setIsLoggedIn}
+        setIsLoggedIn={setIsLoggedIn} // Passando a função para atualizar o estado de login no componente Login
       />
     </nav>
   );
