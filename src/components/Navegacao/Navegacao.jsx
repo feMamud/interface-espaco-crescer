@@ -66,20 +66,20 @@ function Navegacao() {
         </div>
 
         <ul className={`nav-links ${isOpen ? "open" : ""} ${scrolled ? "scrolled" : ""}`}>
-          <li><a href="./">Início</a></li>
-          <li><a href="./espaco">O Espaço</a></li>
-          <li><a href="./psicopedagogia">Psicopedagogia</a></li>
-          <li><a href="./psicanalise">Psicanálise</a></li>
-          <li><a href="./contato">Contato</a></li>
+        <li><Link to="/">Início</Link></li>
+        <li><Link to="/espaco">O Espaço</Link></li>
+        <li><Link to="/psicopedagogia">Psicopedagogia</Link></li>
+        <li><Link to="/psicanalise">Psicanálise</Link></li>
+        <li><Link to="/contato">Contato</Link></li>
 
-          {!isLoggedIn ? (
-            <li><a href="#" onClick={() => setIsLoginOpen(true)}>Login</a></li>
-          ) : (
-            <>
-              <li><a href="./organizacao">Organização</a></li>
-              <li><a href="#" onClick={handleLogout}>Logout</a></li>
-            </>
-          )}
+        {!isLoggedIn ? (
+          <li><a href="#" onClick={() => setIsLoginOpen(true)}>Login</a></li>
+        ) : (
+          <>
+            <li><Link to="/organizacao">Organização</Link></li>
+            <li><a href="#" onClick={handleLogout}>Logout</a></li>
+          </>
+        )}
         </ul>
       </div>
 
