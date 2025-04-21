@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // ✅ IMPORTAÇÃO NECESSÁRIA
 import logo from "../../assets/logo.png";
 import "./Navegacao.css";
 import "./NavegacaoTablet.css";
@@ -66,24 +67,28 @@ function Navegacao() {
         </div>
 
         <ul className={`nav-links ${isOpen ? "open" : ""} ${scrolled ? "scrolled" : ""}`}>
-        <li><Link to="/">Início</Link></li>
-        <li><Link to="/espaco">O Espaço</Link></li>
-        <li><Link to="/psicopedagogia">Psicopedagogia</Link></li>
-        <li><Link to="/psicanalise">Psicanálise</Link></li>
-        <li><Link to="/contato">Contato</Link></li>
+          <li><Link to="/">Início</Link></li>
+          <li><Link to="/espaco">O Espaço</Link></li>
+          <li><Link to="/psicopedagogia">Psicopedagogia</Link></li>
+          <li><Link to="/psicanalise">Psicanálise</Link></li>
+          <li><Link to="/contato">Contato</Link></li>
 
-        {!isLoggedIn ? (
-          <li><a href="#" onClick={() => setIsLoginOpen(true)}>Login</a></li>
-        ) : (
-          <>
-            <li><Link to="/organizacao">Organização</Link></li>
-            <li><a href="#" onClick={handleLogout}>Logout</a></li>
-          </>
-        )}
+          {!isLoggedIn ? (
+            <li><a href="#" onClick={() => setIsLoginOpen(true)}>Login</a></li>
+          ) : (
+            <>
+              <li><Link to="/organizacao">Organização</Link></li>
+              <li><a href="#" onClick={handleLogout}>Logout</a></li>
+            </>
+          )}
         </ul>
       </div>
 
-      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} setIsLoggedIn={setIsLoggedIn} />
+      <Login
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        setIsLoggedIn={setIsLoggedIn}
+      />
     </nav>
   );
 }
