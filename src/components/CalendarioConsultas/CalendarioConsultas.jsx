@@ -1,7 +1,7 @@
 // components/CalendarioConsultas.jsx
 import React, { useEffect, useState } from 'react';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import { getAppointments } from '../services/appointment';
+import { getAppointments } from '../../services/appointment';
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';
 import startOfWeek from 'date-fns/startOfWeek';
