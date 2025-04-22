@@ -1,6 +1,6 @@
 import api from '../api/axiosConfig';
 
-const API_URL = 'http://localhost:3000/clients';
+const API_URL = '/clients';
 
 export const registerClient = async (clientData: {
   realizadoCom: string;
