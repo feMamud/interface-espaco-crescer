@@ -8,6 +8,7 @@ import Organizacao from "./pages/Organizacao/Organizacao";
 import Cliente from "./pages/Cliente/Cliente";
 import Paciente from './pages/Paciente/Paciente';
 import Appointment from './pages/Appointment/Appointmente';
+import CalendarioConsultas from './components/CalendarioConsultas/CalendarioConsultas';
 import PrivateRoute from "./components/PrivateRoutes/PrivateRoutes";
 import Login from './components/Login/Login';
 import { useState, useEffect } from "react";
@@ -44,6 +45,7 @@ function AppRoutes() {
           <Route path="/clientes" Component={Cliente} />
           <Route path="/pacientes" Component={Paciente} />
           <Route path="/consultas" Component={Appointment} />
+          <Route path="/calendario" Component={CalendarioConsultas} />
         </Route>
       </Routes>
     </Roteador>
