@@ -34,6 +34,12 @@ function OrganizacaoSelect() {
         >
           Consultas
         </button>
+        <button
+          className="orgselect-botao cliente"
+          onClick={() => navigate("/calendario")}
+        >
+          Calendário
+        </button>
       </div>
     </div>
   );
