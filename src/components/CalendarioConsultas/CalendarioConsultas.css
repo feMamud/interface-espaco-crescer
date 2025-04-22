@@ -1,0 +1,94 @@
+/* CalendarioConsultas.css */
+
+.calendario-container {
+    background-color: #e9d7c6;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 85vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .calendario-titulo {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3e3e3e;
+    font-weight: 600;
+  }
+  
+  .rbc-calendar {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #4e4e4e;
+  }
+  
+  .rbc-toolbar button {
+    background-color: #bfa693;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rbc-toolbar button:hover {
+    background-color: #a68875;
+  }
+  
+  .rbc-today {
+    background-color: #fff5ea !important;
+  }
+  
+  .rbc-event {
+    background-color: #ad7e5c;
+    border: none;
+    padding: 4px 8px;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+  
+  .rbc-selected {
+    background-color: #92674e !important;
+  }
+  
+  .rbc-off-range {
+    color: #bbb !important;
+  }
+  
+  .rbc-month-view {
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .calendario-container {
+      padding: 20px 10px;
+      height: auto;
+    }
+  
+    .calendario-titulo {
+      font-size: 1.5rem;
+    }
+  
+    .rbc-toolbar button {
+      padding: 4px 8px;
+      font-size: 0.85rem;
+    }
+  }
+  
