@@ -19,6 +19,7 @@ const AppointmentForm = ({ onClose, initialData }) => {
     clientId: initialData?.clientId ? String(initialData.clientId) : "",
     patientId: initialData?.patientId ? String(initialData.patientId) : "",
     status: initialData?.status || "pendente",
+    repeatUntil: "", // <- NOVO
   });
 
   useEffect(() => {
@@ -47,7 +48,6 @@ const AppointmentForm = ({ onClose, initialData }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Garantir exclusividade entre cliente e paciente
     if (name === "clientId" && value) {
       setFormData((prev) => ({ ...prev, clientId: value, patientId: "" }));
     } else if (name === "patientId" && value) {
@@ -70,6 +70,11 @@ const AppointmentForm = ({ onClose, initialData }) => {
       clientId: formData.clientId ? Number(formData.clientId) : null,
       patientId: formData.patientId ? Number(formData.patientId) : null,
     };
+
+    // Remover repeatUntil se estiver vazio
+    if (!cleanData.repeatUntil) {
+      delete cleanData.repeatUntil;
+    }
 
     try {
       const confirmMsg = isEditing
@@ -171,6 +176,25 @@ const AppointmentForm = ({ onClose, initialData }) => {
           <option value="cancelada">Cancelada</option>
         </select>
       </div>
+
+      {!isEditing && (
+        <div className="appointment-form-group">
+          <label className="appointment-form-label">
+            Repetir semanalmente até (opcional):
+          </label>
+          <input
+            type="date"
+            name="repeatUntil"
+            value={formData.repeatUntil}
+            onChange={handleChange}
+            className="appointment-form-input"
+            min={formData.date} // evita datas anteriores
+          />
+          <small className="appointment-form-hint">
+            Será criada uma consulta por semana até essa data.
+          </small>
+        </div>
+      )}
 
       <div className="appointment-form-buttons">
         <button type="submit" className="appointment-form-submit">

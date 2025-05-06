@@ -75,8 +75,6 @@ const PatientList = () => {
   };
 
   if (loading) return <p className="loading-text">Carregando pacientes...</p>;
-  if (patients.length === 0)
-    return <p className="no-patients-text">Nenhum paciente cadastrado.</p>;
 
   return (
     <div className="mae-patient-list-container">
@@ -91,124 +89,134 @@ const PatientList = () => {
 
         {/* Desktop: Tabela */}
         <div className="patient-table-desktop">
-          <table className="table-patient-list">
-            <thead>
-              <tr>
-                <th className="patient-th">Nome</th>
-                <th className="patient-th">Data de Nascimento</th>
-                <th className="patient-th">Telefone</th>
-                <th className="patient-th">Endereço</th>
-                <th className="patient-th">Responsável</th>
-                <th className="patient-th">Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              {paginatedPatients.map((patient) => (
-                <tr key={patient.id} className="patient-row">
-                  <td className="patient-td">{patient.nome}</td>
-                  <td className="patient-td">
-                    {new Date(patient.nascimento).toLocaleDateString()}
-                  </td>
-                  <td className="patient-td">{patient.telefone}</td>
-                  <td className="patient-td">{patient.endereco}</td>
-                  <td className="patient-td">{patient.responsavel}</td>
-                  <td className="patient-actions">
-                    <button
-                      className="patient-button-view"
-                      onClick={() => {
-                        setSelectedObservacoes(
-                          patient.observacao || "Sem observações."
-                        );
-                        setSelectedPatient(patient);
-                        setIsObservacoesOpen(true);
-                      }}
-                    >
-                      Observações
-                    </button>
-                    <button
-                      className="patient-button-edit"
-                      onClick={() => {
-                        setSelectedPatient(patient);
-                        setIsEditing(true);
-                      }}
-                    >
-                      Editar
-                    </button>
-                    <button
-                      className="patient-button-delete"
-                      onClick={() => handleDelete(patient.id)}
-                    >
-                      Excluir
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-          {/* Paginação da tabela */}
-          <div className="pagination-buttons">
-            <button
-              onClick={prevPage}
-              disabled={page === 0}
-              className="patient-button-view"
-            >
-              ⬅ Anterior
-            </button>
-            <button
-              onClick={nextPage}
-              disabled={(page + 1) * patientsPerPage >= patients.length}
-              className="patient-button-view"
-            >
-              Próximo ➡
-            </button>
-          </div>
+          {patients.length === 0 ? (
+            <p className="no-patients-text">Nenhum paciente cadastrado.</p>
+          ) : (
+            <>
+              <table className="table-patient-list">
+                <thead>
+                  <tr>
+                    <th className="patient-th">Nome</th>
+                    <th className="patient-th">Data de Nascimento</th>
+                    <th className="patient-th">Telefone</th>
+                    <th className="patient-th">Endereço</th>
+                    <th className="patient-th">Responsável</th>
+                    <th className="patient-th">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {paginatedPatients.map((patient) => (
+                    <tr key={patient.id} className="patient-row">
+                      <td className="patient-td">{patient.nome}</td>
+                      <td className="patient-td">
+                        {new Date(patient.nascimento).toLocaleDateString()}
+                      </td>
+                      <td className="patient-td">{patient.telefone}</td>
+                      <td className="patient-td">{patient.endereco}</td>
+                      <td className="patient-td">{patient.responsavel}</td>
+                      <td className="patient-actions">
+                        <button
+                          className="patient-button-view"
+                          onClick={() => {
+                            setSelectedObservacoes(
+                              patient.observacao || "Sem observações."
+                            );
+                            setSelectedPatient(patient);
+                            setIsObservacoesOpen(true);
+                          }}
+                        >
+                          Observações
+                        </button>
+                        <button
+                          className="patient-button-edit"
+                          onClick={() => {
+                            setSelectedPatient(patient);
+                            setIsEditing(true);
+                          }}
+                        >
+                          Editar
+                        </button>
+                        <button
+                          className="patient-button-delete"
+                          onClick={() => handleDelete(patient.id)}
+                        >
+                          Excluir
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {/* Paginação da tabela */}
+              <div className="pagination-buttons">
+                <button
+                  onClick={prevPage}
+                  disabled={page === 0}
+                  className="patient-button-view"
+                >
+                  ⬅ Anterior
+                </button>
+                <button
+                  onClick={nextPage}
+                  disabled={(page + 1) * patientsPerPage >= patients.length}
+                  className="patient-button-view"
+                >
+                  Próximo ➡
+                </button>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Mobile: Carrossel */}
         <div className="patient-carousel-mobile">
-          <div className="patient-card">
-            <p><strong>Nome:</strong> {patients[currentIndex].nome}</p>
-            <p><strong>Nascimento:</strong> {new Date(patients[currentIndex].nascimento).toLocaleDateString()}</p>
-            <p><strong>Telefone:</strong> {patients[currentIndex].telefone}</p>
-            <p><strong>Endereço:</strong> {patients[currentIndex].endereco}</p>
-            <p><strong>Responsável:</strong> {patients[currentIndex].responsavel}</p>
-            <div className="patient-actions">
-              <button
-                className="patient-button-view"
-                onClick={() => {
-                  setSelectedObservacoes(
-                    patients[currentIndex].observacao || "Sem observações."
-                  );
-                  setSelectedPatient(patients[currentIndex]);
-                  setIsObservacoesOpen(true);
-                }}
-              >
-                Observações
-              </button>
-              <button
-                className="patient-button-edit"
-                onClick={() => {
-                  setSelectedPatient(patients[currentIndex]);
-                  setIsEditing(true);
-                }}
-              >
-                Editar
-              </button>
-              <button
-                className="patient-button-delete"
-                onClick={() => handleDelete(patients[currentIndex].id)}
-              >
-                Excluir
-              </button>
-            </div>
-          </div>
-
-          <div className="carousel-controls">
-            <button onClick={prevPatient}>⬅️</button>
-            <span>{currentIndex + 1} / {patients.length}</span>
-            <button onClick={nextPatient}>➡️</button>
-          </div>
+          {patients.length === 0 ? (
+            <p className="no-patients-text">Nenhum paciente cadastrado.</p>
+          ) : (
+            <>
+              <div className="patient-card">
+                <p><strong>Nome:</strong> {patients[currentIndex].nome}</p>
+                <p><strong>Nascimento:</strong> {new Date(patients[currentIndex].nascimento).toLocaleDateString()}</p>
+                <p><strong>Telefone:</strong> {patients[currentIndex].telefone}</p>
+                <p><strong>Endereço:</strong> {patients[currentIndex].endereco}</p>
+                <p><strong>Responsável:</strong> {patients[currentIndex].responsavel}</p>
+                <div className="patient-actions">
+                  <button
+                    className="patient-button-view"
+                    onClick={() => {
+                      setSelectedObservacoes(
+                        patients[currentIndex].observacao || "Sem observações."
+                      );
+                      setSelectedPatient(patients[currentIndex]);
+                      setIsObservacoesOpen(true);
+                    }}
+                  >
+                    Observações
+                  </button>
+                  <button
+                    className="patient-button-edit"
+                    onClick={() => {
+                      setSelectedPatient(patients[currentIndex]);
+                      setIsEditing(true);
+                    }}
+                  >
+                    Editar
+                  </button>
+                  <button
+                    className="patient-button-delete"
+                    onClick={() => handleDelete(patients[currentIndex].id)}
+                  >
+                    Excluir
+                  </button>
+                </div>
+              </div>
+              <div className="carousel-controls">
+                <button onClick={prevPatient}>⬅️</button>
+                <span>{currentIndex + 1} / {patients.length}</span>
+                <button onClick={nextPatient}>➡️</button>
+              </div>
+            </>
+          )}
         </div>
       </div>
 

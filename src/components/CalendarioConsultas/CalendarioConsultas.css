@@ -1,94 +1,243 @@
-/* CalendarioConsultas.css */
+/* CONTÊINER E TÍTULOS */
 .calendario-container {
-    height: 80vh;
-    padding: 20px;
-    background-color: #e9d7c6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #2c2c2c;
+  margin-top: 9vh;
+  height: 100vh;
+  padding: 2vw;
+  background-color: #e9d7c6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c2c2c;
+  border-radius: 12px;
+}
+
+.calendario-titulo {
+  text-align: center;
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  color: #2c2c2c;
+  margin-bottom: 2vh;
+  font-weight: bold;
+}
+
+/* CALENDÁRIO */
+.rbc-calendar {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1vw;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+}
+
+.rbc-toolbar {
+  background-color: #f6f1ec;
+  padding: 1vw;
+  border-bottom: 1px solid #ccc;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+.rbc-toolbar-label {
+  font-size: clamp(1.1rem, 1.5vw, 1.6rem);
+  color: #2c2c2c;
+  font-weight: bold;
+}
+
+.rbc-toolbar button {
+  background-color: #7b4f2d;
+  color: white;
+  border: none;
+  padding: 0.5vw 1vw;
+  margin: 0 0.5vw;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+.rbc-toolbar button:hover,
+.rbc-toolbar button:focus {
+  background-color: #5c3920;
+  outline: none;
+}
+
+/* FILTROS E LEGENDA */
+.filtros-legenda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vh;
+  gap: 1vw;
+  background-color: #f6f1ec;
+  padding: 1vw;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(44, 44, 44, 0.1);
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
+}
+
+.filtro label {
+  font-weight: bold;
+}
+
+.filtro select {
+  padding: 0.6vw 1vw;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  color: #2c2c2c;
+}
+
+.legenda {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+}
+
+.legenda-box {
+  width: 1vw;
+  height: 1vw;
+  min-width: 16px;
+  min-height: 16px;
+  display: inline-block;
+  margin-right: 0.5vw;
+  border-radius: 4px;
+}
+
+/* EVENTOS */
+.rbc-event {
+  background-color: #7b4f2d;
+  border: none;
+  padding: 0.3vw 0.6vw;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+}
+
+.rbc-event-content {
+  font-size: clamp(0.85rem, 1vw, 1rem);
+}
+
+.rbc-off-range {
+  background: #f1e8dd;
+}
+
+.rbc-today {
+  background-color: #fff2e5;
+}
+
+/* HEADER */
+.rbc-time-header-cell,
+.rbc-header {
+  color: #2c2c2c;
+  background: #e5d3bc;
+  font-weight: bold;
+  padding: 0.8vw 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* MODAL */
+.modal-content {
+  background-color: #fff;
+  padding: 2vw;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: #2c2c2c;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+}
+
+.modal-content h3 {
+  margin-bottom: 1vh;
+  color: #7b4f2d;
+  font-size: clamp(1.1rem, 1.4vw, 1.6rem);
+}
+
+.modal-content label {
+  display: block;
+  margin: 1vh 0 0.5vh;
+  font-weight: bold;
+}
+
+.modal-content input[type="time"] {
+  width: 100%;
+  padding: 0.5vw;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  background-color: #fefefe;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+
+.modal-buttons button {
+  padding: 0.6vw 1.2vw;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+/* TELAS GRANDES */
+@media (min-width: 1440px) {
+  .calendario-container {
+    padding: 3vw;
   }
-  
+
+  .rbc-toolbar button {
+    padding: 0.7vw 1.5vw;
+  }
+}
+
+@media (min-width: 2560px) {
   .calendario-titulo {
-    text-align: center;
-    font-size: 2rem;
-    color: #2c2c2c;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 3rem;
   }
-  
-  .rbc-calendar {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .rbc-toolbar {
-    background-color: #f6f1ec;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
+
   .rbc-toolbar-label {
-    font-size: 1.2rem;
-    color: #2c2c2c;
+    font-size: 2rem;
   }
-  
+
+  .modal-content {
+    max-width: 600px;
+  }
+
   .rbc-event {
-    background-color: #7b4f2d;
-    border: none;
-    padding: 4px 8px;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 4px;
+    font-size: 1rem;
   }
-  
-  .rbc-event-content {
-    font-size: 0.9rem;
+}
+
+.alerta-consultas {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 12px 20px;
+  margin: 10px 0 20px;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* Para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+  .alerta-consultas {
+    font-size: 14px;
+    padding: 10px 15px;
   }
-  
-  .rbc-off-range {
-    background: #f1e8dd;
+}
+
+/* Para telas muito pequenas (celulares compactos) */
+@media (max-width: 480px) {
+  .alerta-consultas {
+    font-size: 13px;
+    padding: 8px 10px;
   }
-  
-  .rbc-today {
-    background-color: #fff2e5;
-  }
-  
-  .rbc-time-view .rbc-time-slot {
-    border-top: 1px dashed #ccc;
-  }
-  
-  .rbc-timeslot-group {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .rbc-time-header-cell {
-    color: #444;
-    font-weight: 600;
-  }
-  
-  .rbc-header {
-    background: #e5d3bc;
-    color: #2c2c2c;
-    font-weight: bold;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .calendario-container {
-      padding: 20px 10px;
-      height: auto;
-    }
-  
-    .calendario-titulo {
-      font-size: 1.5rem;
-    }
-  
-    .rbc-toolbar button {
-      padding: 4px 8px;
-      font-size: 0.85rem;
-    }
-  }
-  
+}
